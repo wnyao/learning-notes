@@ -58,6 +58,11 @@
 - What is MVC?
 - [Why asynchronous programming?](https://nodesource.com/blog/why-asynchronous)
 
+#### HTML
+
+- Are HTML attribute names case-incensitive?
+  - HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually attributes are lowercased: onclick
+
 #### CSS
 
 - [What is BEM? how does it work?](./css/BEM.md)
