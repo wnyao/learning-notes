@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: grafana-alert
+spec: {}
+status: 
+  phase: Active
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: null
+  name: grafana-alert-api-serviceaccount
+  namespace: grafana-alert
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: grafana-alert-api-clusterrole
+  namespace: grafana-alert
+rules:
+- apiGroups:
+  - batch
+  resources:
+  - cronjobs
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - delete
+  - get
+  - list
+  - watch
+  - deletecollection
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: null
+  name: grafana-alert-api-rolebinding
+  namespace: grafana-alert
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: grafana-alert-api-clusterrole
+subjects:
+- kind: ServiceAccount
+  name: grafana-alert-api-serviceaccount
+  namespace: grafana-alert
+
+---
+
+apiVersion: v1
+data:
+  # TODO: replace values of config below
+  KUBERNETES_CLUSTER_URL: https://10.43.0.1
+  KUBERNETES_SERVICE_ACCOUNT_CA_CERT_PATH: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+  KUBERNETES_SERVICE_ACCOUNT_TOKEN_PATH: /var/run/secrets/kubernetes.io/serviceaccount/token
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: grafana-alert-api-configmap
+  namespace: grafana-alert

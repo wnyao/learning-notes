@@ -1,0 +1,75 @@
+# proxy cache path
+proxy_cache_path /data/nginx/cache levels=1:2 keys_zone=upstream_cache:20m inactive=5m max_size=2G;
+
+# health check conditions
+match health_conditions {
+   status 200;
+   header Content-Type = text/html;
+   body !~ maintenance;
+}
+
+# upstream load balance to this server
+upstream myServers {
+    # hash $scheme$host$request_uri;
+    zone http_backend 64k;
+
+    # use to persist changes from api
+    state /var/lib/nginx/state/http_backend.state;
+
+    # server 127.0.0.1:8081;
+    # server 127.0.0.1:8082 weight=2;
+    # server 127.0.0.1:8083;
+}
+
+# nginx plus dashboard (nginx plus only)
+server {
+   listen 8080;
+   root /usr/share/nginx/html;
+
+   location /api {
+	# allow api write on 
+	api write=on;
+   }
+}
+
+server {
+   listen 80;
+   return 301 https://$host$request_uri;
+}
+
+# proxy pass to upstream
+server {
+   listen 443 ssl;
+   root /usr/share/nginx/html;
+   error_log /var/log/nginx/upstream.error.log info;
+   access_log /var/log/nginx/upstream.access.log combined;
+
+   # add caching header
+   proxy_cache_key $scheme$host$request_uri;
+   add_header X-Proxy-Cache $upstream_cache_status;
+
+   location / {
+	proxy_pass http://myServers;
+	health_check match=health_conditions fails=2 uri=/health/test.html;
+
+	# set caching
+	proxy_cache upstream_cache;
+	proxy_cache_valid 200 5m;
+   }
+}
+
+# upstream servers
+server {
+    listen 8081;
+    root /data/backend1;
+}
+
+server {
+    listen 8082;
+    root /data/backend2;
+}
+
+server {
+    listen 8083;
+    root /data/backend3;
+}

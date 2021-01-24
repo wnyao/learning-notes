@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: test
+  labels:
+    istio-injection: enabled
+spec: {}
+status: {}
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+data:
+  INGRESS_HOST: 192.168.64.23:30320
+  HOST: test-api-v2.com
+metadata:
+  creationTimestamp: null
+  name: test-api-configmap
+  namespace: test

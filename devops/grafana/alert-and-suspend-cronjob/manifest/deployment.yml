@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: grafana-alert-api
+  name: grafana-alert-api
+  namespace: grafana-alert
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana-alert-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: grafana-alert-api
+    spec:
+      serviceAccountName: grafana-alert-api-serviceaccount
+      containers:
+      - image: wnyao/grafana-alert-api
+        name: grafana-alert-api
+        resources: {}
+        volumeMounts:
+          - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+            name: grafana-alert-api-serviceaccount
+            readOnly: true
+        envFrom:
+          - configMapRef:
+              name: grafana-alert-api-configmap
+      volumes:
+          - name: grafana-alert-api-serviceaccount
+            secret: 
+              # TODO: mount to respective secret name from service account
+              secretName: grafana-alert-api-serviceaccount-token-rw4r2
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: grafana-alert-api
+  name: grafana-alert-api
+  namespace: grafana-alert
+spec:
+  ports:
+  - port: 4000
+    protocol: TCP
+    targetPort: 4000
+    nodePort: 32087
+  selector:
+    app: grafana-alert-api
+  type: NodePort
+status:
+  loadBalancer: {}

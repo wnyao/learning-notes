@@ -1,0 +1,44 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: test-job
+  namespace: test
+  resourceVersion: "257664"
+  selfLink: /apis/batch/v1beta1/namespaces/test/cronjobs/test-job
+  uid: e4846526-0932-4900-8d34-cc605ae42354
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  startingDeadlineSeconds: 100
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      name: test-job
+    spec:
+      template:
+        metadata:
+          annotations:
+            prometheus.io/path: /metrics
+            prometheus.io/port: "8080"
+            prometheus.io/scrape: "true"
+          creationTimestamp: null
+        spec:
+          containers:
+          - image: wnyao/test-job:v1
+            imagePullPolicy: IfNotPresent
+            name: test-job
+            resources: {}
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          dnsPolicy: ClusterFirst
+          restartPolicy: OnFailure
+          schedulerName: default-scheduler
+          securityContext: {}
+          terminationGracePeriodSeconds: 30
+  schedule: '* * * * *'
+  successfulJobsHistoryLimit: 1
+  suspend: false

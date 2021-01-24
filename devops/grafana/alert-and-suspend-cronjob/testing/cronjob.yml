@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: test
+spec: {}
+status: {}
+
+---
+
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  # TODO: Replace name
+  name: test-job-failure-2
+  namespace: test
+spec:
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+      # TODO: Replace name
+      name: test-job-failure-2
+    spec:
+      backoffLimit: 3
+      template:
+        metadata:
+          creationTimestamp: null
+        spec:
+          containers:
+          - image: wnyao/test-job-failure-2
+            # TODO: Replace name
+            name: test-job-failure-2
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '*/3 * * * *'
+  startingDeadlineSeconds: 100
+  successfulJobsHistoryLimit: 3
+status: {}

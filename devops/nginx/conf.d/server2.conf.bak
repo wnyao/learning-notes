@@ -1,0 +1,8 @@
+server {
+	listen 8080;
+	root /data/server2;
+
+	# logging directive
+	error_log /var/log/nginx/server2.error.log info;
+	access_log /var/log/nginx/server2.access.log test_log;
+}

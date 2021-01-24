@@ -1,0 +1,49 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: test-api-gateway
+  namespace: test
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: test-api-v1
+  namespace: test
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - test-api-gateway
+  http:
+  - route:
+    - destination:
+        host: test-api-v1 # service name
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: test-api-v2
+  namespace: test
+spec:
+  hosts:
+  - "test-api-v2.com"
+  gateways:
+  - test-api-gateway
+  http:
+  - route:
+    - destination:
+        host: test-api-v2 # service name

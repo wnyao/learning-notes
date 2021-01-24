@@ -1,0 +1,132 @@
+.wrapper {
+  margin: 20px 0;
+}
+
+.text {
+  text-align: center;
+  line-height: 150px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+/* Align item center of flex container */
+.parent {
+  display: flex;
+
+  background: lightgrey;
+  height: 300px;
+}
+
+.child {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+
+  background: orange;
+}
+
+/* Space around evenly ditributed */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  background: tomato;
+  width: 200px;
+  height: 150px;
+}
+
+/* Navigation align based on media query */
+.navigation {
+  flex-flow: row wrap;
+  display: flex;
+
+  background: lightblue;
+  justify-content: flex-end;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .navigation {
+    flex-flow: column wrap;
+  }
+}
+
+.menu {
+  border: 1px solid white;
+  width: 100px;
+}
+
+/* Content alignment */
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content > * {
+  flex: 1 100%;
+  padding: 10px;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 0 0; /* flex-grow | flex-shrink | flex-basis */
+  }
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px;
+  }
+
+  /* flexbox arrangement order */
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}

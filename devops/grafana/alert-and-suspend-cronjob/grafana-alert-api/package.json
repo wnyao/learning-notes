@@ -1,0 +1,30 @@
+{
+  "name": "grafana-alert-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "expres": "^0.0.5",
+    "express": "^4.17.1",
+    "express-pino-logger": "^5.0.0",
+    "http-errors": "^1.7.3",
+    "husky": "^4.2.5",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "pino-colada": "^2.0.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js | pino-colada",
+    "dev": "env-cmd -f .env.development nodemon index.js | pino-colada "
+  },
+  "author": "WenYaoKong <wenyao_k@hotmail.com>",
+  "license": "MIT"
+}

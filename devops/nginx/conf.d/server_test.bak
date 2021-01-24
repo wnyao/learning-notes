@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    return 200 "this server listens on 0.0.0.0:80\n";
+}
+
+# This server will be responding because of clear specification
+server { 
+    listen 127.0.0.1:80;
+    return 200 "this server listens on 127.0.0.1:80\n";
+}

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-api-v1
+  namespace: test
+  labels:
+    app: test-api-v1
+    service: test-api-v1
+spec:
+  # IMPORTANT ===================
+  ports:
+  - port: 3000
+    name: http
+  # IMPORTANT ===================
+  selector:
+    app: test-api-v1
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-api-v2
+  namespace: test
+  labels:
+    app: test-api-v2
+    service: test-api-v2
+spec:
+  # IMPORTANT ===================
+  ports:
+  - port: 3000
+    name: http
+  # IMPORTANT ===================
+  selector:
+    app: test-api-v2
+

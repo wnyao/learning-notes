@@ -1,0 +1,50 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  config.yaml: |
+    istio_namespace: istio-system
+    deployment:
+      accessible_namespaces: ['**']
+    auth:
+      strategy: ldap
+      ldap:
+        ldap_base: "DC=cyder,DC=com,DC=sg"
+        ldap_bind_dn: "CN={USERID},DC=cyder,DC=com,DC=sg"
+        ldap_group_filter: "(cn=%s)"
+        ldap_host: "ironman.cyder.com.sg"
+        ldap_insecure_skip_verify: true
+        ldap_use_ssl: false
+        # ldap_mail_id_key: "mail"
+        # ldap_member_of_key: "memberOf"
+        # ldap_port: 123
+        # ldap_role_filter: ".*xyz.*"
+        # ldap_search_filter: "(&(displayname={USERID}))"
+        # ldap_user_filter: "(cn=%s)"
+        # ldap_user_id_key: "cn"
+    server:
+      port: 20001
+      web_root: /
+    external_services:
+      tracing:
+        url: http://tracing.istio-system:80
+      grafana:
+        url: http://access-grafana.cattle-prometheus:80
+      prometheus:
+        url: http://access-prometheus.cattle-prometheus:80
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-09-02T11:21:44Z"
+  labels:
+    app: kiali
+    chart: kiali
+    heritage: Tiller
+    io.cattle.field/appId: cluster-istio
+    release: cluster-istio
+  name: kiali
+  namespace: istio-system
+  resourceVersion: "6748606"
+  selfLink: /api/v1/namespaces/istio-system/configmaps/kiali
+  uid: 60006747-ff99-4dc9-a536-9fe687034652

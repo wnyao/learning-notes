@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: 05-02-b
+  labels:
+    istio-injection: enabled
+spec: {}
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: service2
+  namespace: 05-02-b
+  labels:
+    app: service2
+spec:
+  ports:
+  - name: http
+    port: 3000
+    targetPort: 3000
+  selector:
+    app: service2
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpbin
+  namespace: 05-02-b
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service2
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: service2
+        version: v1
+    spec:
+      containers:
+      - image: wnyao/test-api:v2
+        imagePullPolicy: IfNotPresent
+        name: service2
+        ports:
+        - containerPort: 3000
+
+---
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: istio
+  name: service2-ingress
+  namespace: 05-02-b
+spec:
+  rules:
+  - host: service2.gel.cyder.com.sg
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: service2
+          servicePort: 3000

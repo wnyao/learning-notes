@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-api-stable
+    release: stable
+  name: test-api-v1
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-api
+        release: stable
+    spec:
+      containers:
+      - image: wnyao/test-api:v1
+        name: test-api-v1
+        resources: {}
+        envFrom:
+          - configMapRef:
+              name: test-api-configmap
+status: {}
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-api-canary
+    release: canary
+  name: test-api-v2
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-api
+        release: canary
+    spec:
+      containers:
+      - image: wnyao/test-api:v2
+        name: test-api-v2
+        resources: {}
+        envFrom:
+          - configMapRef:
+              name: test-api-configmap
+status: {}
