@@ -14,7 +14,7 @@
 
 #### Interview Guides
 
-- [the-interview-guide-for-software-engineers](https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764?fbclid=IwAR0VFWrZQNubogg4Sbk_MKCDeZZ_5RjR7d6lvdx5rUyop0AtD6wKvam9gxM)
+- [The Interview Study Guide For Software Engineers](https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764?fbclid=IwAR0VFWrZQNubogg4Sbk_MKCDeZZ_5RjR7d6lvdx5rUyop0AtD6wKvam9gxM)
 
 # Questions
 
