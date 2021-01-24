@@ -7,10 +7,10 @@
 
 #### How to implement?
 
-- [Implement setTimeout in React](https://github.com/wnyao/javascript-learnings/blob/master/react/settimeout.js)
-- [Stopwatch](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/stopwatch_example.js)
-- [FileReader](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/filereader_example.js)
-- [Hook](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/hook_example.js)
+- Implement setTimeout in React
+- [Stopwatch](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/stopwatch_example.js)
+- [FileReader](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/filereader_example.js)
+- [Simple Hook](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/hook_example.js)
 
 #### Interview Guides
 
@@ -48,7 +48,7 @@
 - [How this is difference in class ane normal function?](https://www.debuggr.io/js-this-in-depth/#the-quiz)
 - What is recursion?
 - What is the difference between cookie and session?
-- [What is the difference between null, undefined, and not defined?](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/difference_null_undefined_notdefined.js)
+- [What is the difference between null, undefined, and not defined?](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/difference_null_undefined_notdefined.js)
 
 #### Programming
 
