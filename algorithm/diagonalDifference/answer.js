@@ -1,21 +1,27 @@
-const diagonalDifference = (arr) => {
-  if (!arr || arr.length === 0) return 0;
+// answer 1
+function diagonalDifference(arr) {
+  let [sumF, sumB] = [0, 0];
 
-  let sum1 = 0;
-  let sum2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const nums = arr[i];
+    sumF += nums[i];
+    sumB += nums[nums.length - (i + 1)];
+  }
 
-  // i start from 1
-  arr.forEach((row, i) => {
-    const length = row.length;
-    if (length === 1) return;
-    const index = i - 1;
+  return Math.abs(sumF - sumB);
+}
 
-    // add number diagonally
-    sum1 += row[index];
-    sum2 += row[length - 1 - index];
-  });
+// answer 2
+function diagonalDifference(arr) {
+  let total = 0;
 
-  return Math.abs(sum2 - sum1);
-};
+  for (let i = 0; i < arr.length; i++) {
+    const numbers = arr[i];
 
-module.exports = { answer: diagonalDifference };
+    const f = numbers[i];
+    const b = numbers[numbers.length - (i + 1)];
+    total -= f - b;
+  }
+
+  return Math.abs(total);
+}
