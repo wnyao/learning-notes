@@ -10,4 +10,5 @@
 | 25 Jan 2021 | [Mini Max Sum](https://github.com/wnyao/learning-notes/tree/master/algorithm/miniMaxSum)                   | js py      |
 | 25 Jan 2021 | [Plus Minus](https://github.com/wnyao/learning-notes/tree/master/algorithm/plusMinus)                      | js py java |
 | 25 Jan 2021 | [Staircase](https://github.com/wnyao/learning-notes/tree/master/algorithm/staircase)                       | js py java |
-| 26 Jan 2021 | [Birthday Cake Candles](https://github.com/wnyao/learning-notes/tree/master/algorithm/birthdayCakeCandles) | js py java |
+| 27 Jan 2021 | [Birthday Cake Candles](https://github.com/wnyao/learning-notes/tree/master/algorithm/birthdayCakeCandles) | js py java |
+| 28 Jan 2021 | [Time Conversion](https://github.com/wnyao/learning-notes/tree/master/algorithm/timeConversion)            | js py java |
