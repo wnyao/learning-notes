@@ -13,3 +13,4 @@
 | 27 Jan 2021 | [Birthday Cake Candles](https://github.com/wnyao/learning-notes/tree/master/algorithm/birthdayCakeCandles) | js py java |
 | 28 Jan 2021 | [Time Conversion](https://github.com/wnyao/learning-notes/tree/master/algorithm/timeConversion)            | js py java |
 | 31 Jan 2021 | [Inserting Sort - Part 1](https://github.com/wnyao/learning-notes/tree/master/algorithm/insertingSort-1)   | js py java |
+| 31 Jan 2021 | [Inserting Sort - Part 2](https://github.com/wnyao/learning-notes/tree/master/algorithm/insertingSort-2)   | js py      |
