@@ -30,7 +30,7 @@
 - [How is this difference in class ane normal function?](https://www.debuggr.io/js-this-in-depth/#the-quiz)
 - What is **recursion**?
 - What is the difference between **cookie** and **session**?
-- [What is the difference between null, undefined, and not defined?](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/difference_null_undefined_notdefined.js)
+- [What is the difference between null, undefined, and not defined?](.js/implementations/difference_null_undefined_notdefined.js)
 - What is the difference between **bind**, **apply**, and **call** (function carrying & borrowing)?
 - What is **IIFE (Immediately invoked function expression)**?
 - Define **JSON (Javascript Object Notation)**?
