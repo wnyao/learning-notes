@@ -8,9 +8,9 @@
 #### How to implement?
 
 - Implement setTimeout in React
-- [Stopwatch](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/stopwatch_example.js)
-- [FileReader](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/filereader_example.js)
-- [Simple Hook](https://github.com/wnyao/learning-notes/blob/master/javascript/cjs/implementations/hook_example.js)
+- [Stopwatch](.js/implementations/stopwatch_example.js)
+- [FileReader](.js/implementations/filereader_example.js)
+- [Simple Hook](.js/implementations/hook_example.js)
 
 #### Interview Guides
 
