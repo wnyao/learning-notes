@@ -17,12 +17,6 @@ low = 0
 high = 6
 ```
 
-### Sample Output
-
-```
-
-```
-
 ### Code
 
 ```
