@@ -2,7 +2,7 @@
 
 ### Description
 
-QuickSort is a **Divide ans Conquer algoritm**. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivott in different ways:
+QuickSort is a **Divide and Conquer algoritm**. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivott in different ways:
 
 1. Always pick first element as pivot.
 2. Always pick last element as pivot (as below).
