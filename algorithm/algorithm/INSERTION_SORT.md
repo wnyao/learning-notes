@@ -146,3 +146,4 @@ insertionSort(array);
 
 - https://www.geeksforgeeks.org/insertion-sort/
 - https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true
+- https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/analysis-of-insertion-sort
