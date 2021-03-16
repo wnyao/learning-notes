@@ -1,5 +1,15 @@
 # Selection Sort
 
+- Selection sort replaced a predecessor, the bubble sort.
+- Have worst-case sort speed of `O(n^2)`
+- Perform fewer exhanges compare to bubble sort.
+
+### Concept
+
+Looks for the smallest item in the list and places it in the front (ensuring that the item is in its correct location) or looks for the largest item and places it in the back of the list. Guarantees that items immediately appear in the final location once moved.
+
+---
+
 ### Sample Input
 
 ```
@@ -159,4 +169,5 @@ arr[min_idx] = arr[i]
 
 # Readings
 
-- https://www.geeksforgeeks.org/selection-sort/
+- [Selection Sort](https://www.geeksforgeeks.org/selection-sort/)
+- Algorithms for Dummies, Chapter 7: Arranging and Searching Data
