@@ -1,129 +1,57 @@
 # Insertion Sort
 
+- Considered a brute-force method
+- Insetion sort has best-case sort speed of `O(n)` and worst case sort spped of `O(n2)`
+- Example of best-case sort speed when the entire dataset is already sorted because the insertion sort wont have to move any values.
+- Example of worst-case is when dataset is sorted in reverse order because the insetion sort require to move every value.
+
+### Concept
+
+Insertion sort works by using a single item as a startig point and adding items to the left or right of it based on whether these items are less than or greater than the selected item. As the number of sorted items builds, the algorithm checks new items against the sorted items and inserts the new item into the right position in the list.
+
+---
+
 ### Sample Input
 
 ```
-n = 6
-arr = 1 4 3 5 6 2
+data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 ```
 
 ### Sample Output
 
 ```
-1 4 3 5 6 2
-1 3 4 5 6 2
-1 3 4 5 6 2
-1 3 4 5 6 2
-1 2 3 4 5 6
+5 9 7 4 2 8 1 10 6 3
+5 7 9 4 2 8 1 10 6 3
+4 5 7 9 2 8 1 10 6 3
+2 4 5 7 9 8 1 10 6 3
+2 4 5 7 8 9 1 10 6 3
+1 2 4 5 7 8 9 10 6 3
+1 2 4 5 7 8 9 10 6 3
+1 2 4 5 6 7 8 9 10 3
+1 2 3 4 5 6 7 8 9 10
 ```
 
 ### Code
 
-```
-def insertionSort2(n, arr):
-  for j in range(1, n):
-    key = arr[j]
-    i = j - 1
+#### Example 1
 
-    while i >= 0 and arr[i] > key:
-      arr[i + 1] = arr[i]
-      i = i - 1
+```python
+def insertionSort(arr):
+    for scanIndex in range(1, len(data)):
+        temp = data[scanIndex]
+        minIndex = scanIndex
 
-    arr[i + 1] = key
-    print(" ".join(map(str, arr)));
-```
+        while minIndex > 0 and temp < data[minIndex - 1]:
+            data[minIndex] = data[minIndex - 1] # move comparative bigger element forward
+            minIndex -= 1 # move min index one step backward
 
-### Execution
-
-```
-j = 1
-key = 4
-i = 0
-
-arr[i] = 1
-i >= 0 and arr[i] > key = false
-
-1 "4" 3 5 6 2 unchanged
-print
-
--------------------------------------------
-
-j = 2
-key = 3
-i = 1
-
-arr[i] = 4
-i >= 0 and arr[i] > key = true
-1 4 "4" 5 6 2 copy over
-i = 0
-
-arr[i] = 1
-i >= 0 and arr[i] > key = false
-
-1 "3" 4 5 6 2
-print
-
--------------------------------------------
-
-j = 3
-key = 5
-i = 2
-
-arr[i] = 4
-i >= 0 and arr[i] > key = false
-
-1 3 4 "5" 6 2 unchanged
-print
-
--------------------------------------------
-
-j = 4
-key = 6
-i = 3
-
-arr[i] = 5
-i >= 0 and arr[i] > key = false
-
-1 3 4 5 "6" 2 unchanged
-print
-
--------------------------------------------
-
-j = 5
-key = 2
-i = 4
-
-arr[i] = 6
-i >= 0 and arr[i] > key = true
-1 3 4 5 6 "6" copy arr[i] forward
-i = 3 decrease i
-
-arr[i] = 5
-i >= 0 and arr[i] > key = true
-1 3 4 5 "5" 6
-i = 2
-
-arr[i] = 4
-i >= 0 and arr[i] > key = true
-1 3 4 "4" 5 6
-i = 1
-
-arr[i] = 3
-i >= 0 and arr[i] > key = true
-1 3 "3" 4 5 6
-i = 0
-
-arr[i] = 1
-i >= 0 and arr[i] > key = false
-
-1 "2" 3 4 5 6
-print
-
+        data[minIndex] = temp
+        print(data)
 ```
 
-### Other solutions
+#### Example 2
 
-```
+```javascript
 var insert = function(array, rightIndex, value) {
     for(var j = rightIndex; j >= 0 && array[j] > value; j--) {
         array[j + 1] = array[j];
@@ -144,6 +72,7 @@ insertionSort(array);
 
 # Readings
 
-- https://www.geeksforgeeks.org/insertion-sort/
-- https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true
-- https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/analysis-of-insertion-sort
+- [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/)
+- [Insertionsort 2](https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true)
+- [Analysis of insertion sort](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/analysis-of-insertion-sort)
+- Algorithms for Dummies, Chapter 7: Arranging and Searching Data
