@@ -4,6 +4,7 @@
 - Requires use of two functions
 - The first function works recursively to split the pieces and pieced them in sorted array; involves recursion
 - The second function performs task of merging the two sides using iterative process
+- Unlike quick sort comparatively, merge sort requires `O(n)` extra storage which make it expensive. Allocating and de-allocating the extra space used increase the running time of the algorithm.
 
 ### Concept
 
@@ -80,3 +81,4 @@ mergeSort(data)
 # Readings
 
 - Algorithms for Dummies, Chapter 7: Arranging and Searching Data
+- [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)

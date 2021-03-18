@@ -1,63 +1,120 @@
 # Quick Sort
 
-QuickSort is a **Divide and Conquer algoritm**. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways:
+- QuickSort is a **Divide and Conquer algoritm**. 
+- Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
+- Can be recursively or iteratively implemented
+- Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
+- The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n2)`.
+
+### Concept
+
+It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways:
 
 1. Always pick first element as pivot.
 2. Always pick last element as pivot (as below).
 3. Pick a random element as pivot.
 4. Pick median as pivot.
 
-### Sample Input
+---
 
-```javascript
-var arr = {10, 80, 30, 90, 40, 50, 70}
-var low = 0
-var high = 6
+### [Iterative Quick Sort](https://www.geeksforgeeks.org/iterative-quick-sort/)
+
+```python
+# A typical recursive Python 
+# implementation of QuickSort 
+  
+# Function takes last element as pivot, 
+# places the pivot element at its correct 
+# position in sorted array, and places all 
+# smaller (smaller than pivot) to left of 
+# pivot and all greater elements to right 
+# of pivot 
+def partition(arr, low, high): 
+    i = (low - 1)         # index of smaller element 
+    pivot = arr[high]     # pivot last element
+  
+    for j in range(low, high): 
+  
+        # If current element is smaller  
+        # than or equal to pivot 
+        if arr[j] <= pivot: 
+          
+            # increment index of 
+            # smaller element 
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i] 
+  
+    arr[i + 1], arr[high] = arr[high], arr[i + 1] 
+    return (i + 1) 
+  
+# The main function that implements QuickSort 
+# arr[] --> Array to be sorted, 
+# low --> Starting index, 
+# high --> Ending index 
+  
+# Function to do Quick sort 
+def quickSort(arr, low, high): 
+    if low < high: 
+  
+        # pi is partitioning index, arr[p] is now 
+        # at right place 
+        pi = partition(arr, low, high) 
+  
+        # Separately sort elements before 
+        # partition and after partition 
+        quickSort(arr, low, pi-1) 
+        quickSort(arr, pi + 1, high) 
+  
+# Driver Code 
+if __name__ == '__main__' : 
+      
+    arr = [4, 2, 6, 9, 2] 
+    n = len(arr) 
+      
+    # Calling quickSort function 
+    quickSort(arr, 0, n - 1) 
+      
+    for i in range(n): 
+        print(arr[i], end = " ") 
 ```
 
-### Code
+### [Iterative Sort Example 2](https://g.co/kgs/oM2Z3y)
 
-```javascript
-/**
- * low  --> Starting index,
- * high  --> Ending index
- */
-quickSort(arr, low, high) {
-    if (low < high) {
-        // pi is partitioning index, arr[pi] is now at right place
-        pi = partition(arr, low, high);
+```python
+data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 
-        quickSort(arr, low, pi - 1);  // Before pi
-        quickSort(arr, pi + 1, high); // After pi
-    }
-}
+def partition(data, left, right): 
+    pivot = data[left]
+    lIndex = left + 1
+    rIndex = right
 
-/**
- * This function takes last element as pivot, places
- * the pivot element at its correct position in sorted
- * array, and places all smaller (smaller than pivot)
- * to left of pivot and all greater elements to right
- * of pivot
- */
-partition(arr, low, high) {
-    // pivot (Element to be placed at right position)
-    pivot = arr[high]; 
+    while True:
+        while lIndex <= rIndex and data[lIndex] <= pivot:
+            lIndex += 1
+        while rIndex >= lIndex and data[rIndex] >= pivot:
+            rIndex -= 1
+        if rIndex <= lIndex:
+            break
+        data[lIndex], data[rIndex] = \
+            data[rIndex], data[lIndex]
+        print(data)
 
-    // Index of smaller element
-    i = (low - 1) 
+    data[left], data[rIndex] = data[rIndex], data[left]
+    print(data)
+    return rIndex
 
-    for (j = low; j <= high- 1; j++) {
+def quickSort(data, left, right):
+    if right <= left:
+        return 
+    else:
+        pivot = partition(data, left, right) 
+        quickSort(data, left, pivot-1) 
+        quickSort(data, pivot+1, right)
 
-        // If current element is smaller than the pivot
-        if (arr[j] < pivot) {
-            i++; // increment index of smaller element
-            swap arr[i] and arr[j]
-        }
-    }
+    return data
 
-    swap arr[i + 1] and arr[high])
-    return (i + 1)
-}
+# Execution
+quickSort(data, 0, len(data)-1)
 ```
 
 ### Execution
@@ -68,7 +125,7 @@ Indexes:  0   1   2   3   4   5   6
 
 low = 0
 high =  6
-pivot = arr[h] = 70
+pivot = arr[h] = 70 Pivot last element
 i = -1 Initialize index of smaller element
 
 Traverse elements from j = low to high-1
@@ -107,4 +164,5 @@ it.
 
 # Readings
 
-- https://www.geeksforgeeks.org/quick-sort/
+- [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
+- [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)
