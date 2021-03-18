@@ -1,8 +1,6 @@
 # Quick Sort
 
-### Description
-
-QuickSort is a **Divide and Conquer algoritm**. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivott in different ways:
+QuickSort is a **Divide and Conquer algoritm**. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways:
 
 1. Always pick first element as pivot.
 2. Always pick last element as pivot (as below).
@@ -11,15 +9,15 @@ QuickSort is a **Divide and Conquer algoritm**. It picks an element as pivot and
 
 ### Sample Input
 
-```
-arr = {10, 80, 30, 90, 40, 50, 70}
-low = 0
-high = 6
+```javascript
+var arr = {10, 80, 30, 90, 40, 50, 70}
+var low = 0
+var high = 6
 ```
 
 ### Code
 
-```
+```javascript
 /**
  * low  --> Starting index,
  * high  --> Ending index
@@ -33,9 +31,7 @@ quickSort(arr, low, high) {
         quickSort(arr, pi + 1, high); // After pi
     }
 }
-```
 
-```
 /**
  * This function takes last element as pivot, places
  * the pivot element at its correct position in sorted
@@ -44,10 +40,14 @@ quickSort(arr, low, high) {
  * of pivot
  */
 partition(arr, low, high) {
-    pivot = arr[high]; // pivot (Element to be placed at right position)
-    i = (low - 1) // Index of smaller element
+    // pivot (Element to be placed at right position)
+    pivot = arr[high]; 
+
+    // Index of smaller element
+    i = (low - 1) 
 
     for (j = low; j <= high- 1; j++) {
+
         // If current element is smaller than the pivot
         if (arr[j] < pivot) {
             i++; // increment index of smaller element
@@ -62,7 +62,7 @@ partition(arr, low, high) {
 
 ### Execution
 
-```
+```text
 arr[] = { 10, 80, 30, 90, 40, 50, 70 }
 Indexes:  0   1   2   3   4   5   6
 
