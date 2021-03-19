@@ -1,7 +1,5 @@
 # Quick Sort
 
-[QuickSort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&ab_channel=Computerphile)
-
 - QuickSort is a **Divide and Conquer algoritm**. 
 - Useful for sorting arrays.
 - Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
@@ -240,5 +238,6 @@ Public class Solution {
 
 # Readings
 
+- [Quick Sort - Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU&ab_channel=Computerphile)
 - [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
 - [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)
