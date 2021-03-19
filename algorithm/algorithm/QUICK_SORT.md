@@ -1,10 +1,20 @@
 # Quick Sort
 
+[QuickSort](https://www.youtube.com/watch?v=XE4VP_8Y0BU&ab_channel=Computerphile)
+
 - QuickSort is a **Divide and Conquer algoritm**. 
 - Useful for sorting arrays.
 - Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
 - Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
 - The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n^2)`.
+
+### Performance 
+
+Quicksort seldom incurs the worst-case sort time. However, even modified versions of the Quicksort can have a worst-case sort time of O(n2) when one of these events occurs:
+
+- The dataset is already sorted in the desired order. 
+- The dataset is sorted in reverse order.
+- All the elements in the dataset are the same.
 
 ### Concept
 
@@ -142,7 +152,7 @@ it.
 - First element as pivot 
 
 ```python
-data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
+data = [9, 5, 7, 4, 2, 8]
 
 def partition(data, left, right): 
     pivot = data[left]
@@ -152,12 +162,14 @@ def partition(data, left, right):
     while True:
         while lIndex <= rIndex and data[lIndex] <= pivot:
             lIndex += 1
+
         while rIndex >= lIndex and data[rIndex] >= pivot:
             rIndex -= 1
+
         if rIndex <= lIndex:
             break
-        data[lIndex], data[rIndex] = \
-            data[rIndex], data[lIndex]
+
+        data[lIndex], data[rIndex] = data[rIndex], data[lIndex]
         print(data)
 
     data[left], data[rIndex] = data[rIndex], data[left]
