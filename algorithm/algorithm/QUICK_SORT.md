@@ -1,6 +1,7 @@
 # Quick Sort
 
 - QuickSort is a **Divide and Conquer algoritm**. 
+- Useful for sorting arrays.
 - Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
 - Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
 - The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n^2)`.
@@ -16,9 +17,14 @@ It picks an element as pivot and partitions the given array around the picked pi
 
 Basic process: 
 
-1. Pick a pivot
-2. Partition the array into 3 subarrays: A. items < pivot, B. the pivot, C. items >= pivot
-3. Recursively quicksort A and C
+1. Find a “pivot” item in the array. This item is the basis for comparison for a single round.
+2. Start a pointer (the left pointer) at the first item in the array.
+3. Start a pointer (the right pointer) at the last item in the array.
+4. While the value at the left pointer in the array is less than the pivot value, move the left pointer to the right (add 1). Continue until the value at the left pointer is greater than or equal to the pivot value.
+5. While the value at the right pointer in the array is greater than the pivot value, move the right pointer to the left (subtract 1). Continue until the value at the right pointer is less than or equal to the pivot value.
+6. If the left pointer is less than or equal to the right pointer, then swap the values at these locations in the array.
+7. Move the left pointer to the right by one and the right pointer to the left by one.
+8. If the left pointer and right pointer don’t meet, go to step 1.
 
 ---
 
