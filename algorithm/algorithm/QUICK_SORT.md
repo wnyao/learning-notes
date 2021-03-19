@@ -2,9 +2,8 @@
 
 - QuickSort is a **Divide and Conquer algoritm**. 
 - Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
-- Can be recursively or iteratively implemented
 - Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
-- The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n2)`.
+- The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n^2)`.
 
 ### Concept
 
@@ -15,9 +14,18 @@ It picks an element as pivot and partitions the given array around the picked pi
 3. Pick a random element as pivot.
 4. Pick median as pivot.
 
+Basic process: 
+
+1. Pick a pivot
+2. Partition the array into 3 subarrays: A. items < pivot, B. the pivot, C. items >= pivot
+3. Recursively quicksort A and C
+
 ---
 
-### [Iterative Quick Sort](https://www.geeksforgeeks.org/iterative-quick-sort/)
+### [Iterative Quick Sort (Last element as pivot)](https://www.geeksforgeeks.org/iterative-quick-sort/)
+
+- Last elemenet as pivit 
+- As worst case sort time `O(n^2)`, as subsequent arr will be called to quick sort
 
 ```python
 # A typical recursive Python 
@@ -78,46 +86,7 @@ if __name__ == '__main__' :
         print(arr[i], end = " ") 
 ```
 
-### [Iterative Sort Example 2](https://g.co/kgs/oM2Z3y)
-
-```python
-data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
-
-def partition(data, left, right): 
-    pivot = data[left]
-    lIndex = left + 1
-    rIndex = right
-
-    while True:
-        while lIndex <= rIndex and data[lIndex] <= pivot:
-            lIndex += 1
-        while rIndex >= lIndex and data[rIndex] >= pivot:
-            rIndex -= 1
-        if rIndex <= lIndex:
-            break
-        data[lIndex], data[rIndex] = \
-            data[rIndex], data[lIndex]
-        print(data)
-
-    data[left], data[rIndex] = data[rIndex], data[left]
-    print(data)
-    return rIndex
-
-def quickSort(data, left, right):
-    if right <= left:
-        return 
-    else:
-        pivot = partition(data, left, right) 
-        quickSort(data, left, pivot-1) 
-        quickSort(data, pivot+1, right)
-
-    return data
-
-# Execution
-quickSort(data, 0, len(data)-1)
-```
-
-### Execution
+#### Explanation
 
 ```text
 arr[] = { 10, 80, 30, 90, 40, 50, 70 }
@@ -160,6 +129,95 @@ arr[] = {10, 30, 40, 50, "70", 90, "80"} 80 and 70 Swapped
 Now 70 is at its correct place. All elements smaller than
 70 are before it and all elements greater than 70 are after
 it.
+```
+
+### [Iterative Sort (First element as pivot)](https://g.co/kgs/oM2Z3y)
+
+- First element as pivot 
+
+```python
+data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
+
+def partition(data, left, right): 
+    pivot = data[left]
+    lIndex = left + 1
+    rIndex = right
+
+    while True:
+        while lIndex <= rIndex and data[lIndex] <= pivot:
+            lIndex += 1
+        while rIndex >= lIndex and data[rIndex] >= pivot:
+            rIndex -= 1
+        if rIndex <= lIndex:
+            break
+        data[lIndex], data[rIndex] = \
+            data[rIndex], data[lIndex]
+        print(data)
+
+    data[left], data[rIndex] = data[rIndex], data[left]
+    print(data)
+    return rIndex
+
+def quickSort(data, left, right):
+    if right <= left:
+        return 
+    else:
+        pivot = partition(data, left, right) 
+        quickSort(data, left, pivot-1) 
+        quickSort(data, pivot+1, right)
+
+    return data
+
+# Execution
+quickSort(data, 0, len(data)-1)
+```
+
+### [Iterative Sort (Randomized element as pivot)](https://www.youtube.com/watch?v=SLauY6PpjW4&t=477s&ab_channel=HackerRank)
+
+```java
+
+Public class Solution {
+
+    public static void quickSort(int[] array) {
+        quickSort(array, 0, array.length - 1) 
+    }
+
+    public static void quickSort(int[] array, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        
+        int pivot = array[(left + right) / 2]; // pick a pivot
+        int index = partition(array, left, right, pivot); // partition array around this pivot
+        quicksort(array, left, index - 1); // Sort left-sided array of pivot
+        quicksort(array, index, right); // Sort right-sided array of pivot
+    }
+
+    public static int partition(int[] array, int left, int right, int pivot) {
+        while(left <= right) {
+
+            // Move left forward until an out of order element is found 
+            while (array[left] < pivot) {
+                left++;
+            }
+
+            // Move right backward until an out of order element is found 
+            while (array[right] > pivot) {
+                right--;
+            }
+
+            if (left <= right) {
+                swap(array, left, right);
+                left++;
+                right--;
+            }
+        }
+
+        # New partition point
+        return left;
+    }
+} 
+
 ```
 
 # Readings
