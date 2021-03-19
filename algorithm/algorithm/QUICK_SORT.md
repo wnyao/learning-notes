@@ -24,7 +24,7 @@ Basic process:
 
 ### [Iterative Quick Sort (Last element as pivot)](https://www.geeksforgeeks.org/iterative-quick-sort/)
 
-- Last elemenet as pivit 
+- Last elemenet as pivot 
 - As worst case sort time `O(n^2)`, as subsequent arr will be called to quick sort
 
 ```python
