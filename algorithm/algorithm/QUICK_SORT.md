@@ -8,7 +8,17 @@
 
 ### Performance 
 
-Quicksort seldom incurs the worst-case sort time. However, even modified versions of the Quicksort can have a worst-case sort time of O(n2) when one of these events occurs:
+The time taken by quick sort depends upon the input array and partition strategy.
+
+#### Best case
+
+The best case occurs when the partition process always picks the middle element as pivot.
+
+#### Worst case
+
+The worst case occurs when the partition process always picks greatest or smallest element as pivot. If we consider partition strategy where last element is always picked as pivot, the worst case would occur when the array is already sorted in increasing or decreasing order.
+
+Even modified versions of the Quicksort can have a worst-case sort time of `O(n^2)` when one of these events occurs:
 
 - The dataset is already sorted in the desired order. 
 - The dataset is sorted in reverse order.
@@ -57,15 +67,18 @@ def partition(arr, low, high):
   
     for j in range(low, high): 
   
-        # If current element is smaller  
-        # than or equal to pivot 
+        # If current element is smaller than or equal to pivot 
+        # here we place element less than or 
+        # equal to pivot to head of array 
         if arr[j] <= pivot: 
           
-            # increment index of 
-            # smaller element 
+            # increment index of smaller element 
+            # and swap current element with arr[i]
             i += 1
             arr[i], arr[j] = arr[j], arr[i] 
   
+    # Put pivot to the end of left partition 
+    # where smaller elements were allocated above
     arr[i + 1], arr[high] = arr[high], arr[i + 1] 
     return (i + 1) 
   
@@ -238,6 +251,7 @@ Public class Solution {
 
 # Readings
 
-- [Quick Sort - Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU&ab_channel=Computerphile)
 - [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
+- [Iterative Quick Sort](https://www.geeksforgeeks.org/iterative-quick-sort/)
+- [Quick Sort - Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU&ab_channel=Computerphile)
 - [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)
