@@ -5,6 +5,7 @@
 - The first function works recursively to split the pieces and pieced them in sorted array; involves recursion
 - The second function performs task of merging the two sides using iterative process
 - Unlike quick sort comparatively, merge sort requires `O(n)` extra storage which make it expensive. Allocating and de-allocating the extra space used increase the running time of the algorithm.
+- As said to not functioned efficiently for array but linked list 
 
 ### Concept
 
