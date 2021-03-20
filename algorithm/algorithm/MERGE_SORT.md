@@ -31,12 +31,7 @@ def mergeSort(list):
     right = mergeSort(list[middle:])
 
     # Merge the two sorted pieces into a larger piece.
-    print("Left side: ", left)
-    print("Right side: ", right)
-
     merged = merge(left, right)
-    print("Merged ", merged)
-    print("")
     return merged
 
 # Caveat: 
