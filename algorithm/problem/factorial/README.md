@@ -2,9 +2,9 @@
 
 ### Description
 
-We indicate factorial of `n` by `n!`. It's the product of integers 1 through n. For example, `5!` equals `1*2*3*4*5`, or 120.
+We indicate factorial of `n` by `n!`. It's the product of integers 1 through n. For example, `5!` equals `1 * 2 * 3 * 4 * 5`, or 120.
 
-Factorial function is usefull for when trying to count how many different orders there are for things or how many different ways we can combine things (permutation and combinations).
+Factorial function is useful for when trying to count how many different orders there are for things or how many different ways we can combine things (permutation and combinations).
 
 The factorial function is defined for all positive integers, along with 0. What value should `0!` have? It's the product of intergers greater than or equal to 1 and less than or equal to 0. But there are no such integers. Therefore, `0!` is defined to equal the identity of multiplication, which is 1.
 

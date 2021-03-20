@@ -1,3 +1,9 @@
+// Recursive approach
+const factorial1 = (num) => {
+  return 0 ? 1 : num * factorial1(num - 1)
+}
+
+// Iterative approach
 const factorial = (n) => {
   let result = 1;
 

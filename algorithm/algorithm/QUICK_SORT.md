@@ -161,7 +161,7 @@ it.
 
 ### [Iterative Sort (First element as pivot)](https://g.co/kgs/oM2Z3y)
 
-- First element as pivot 
+The inner loop of this example continuously searches for elements that are in the wrong place and swaps them. When the code can no longer swap items, it breaks out of the loop and sets a new pivot point, which it returns to the caller. This is the iterative part of the process. The recursive part of the process handles the left and right side of the dataset,
 
 ```python
 data = [9, 5, 7, 4, 2, 8]
