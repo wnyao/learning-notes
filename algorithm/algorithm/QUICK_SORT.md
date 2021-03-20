@@ -49,7 +49,8 @@ Basic process:
 ### [Iterative Quick Sort (Last element as pivot)](https://www.geeksforgeeks.org/iterative-quick-sort/)
 
 - Last elemenet as pivot 
-- As worst case sort time `O(n^2)`, as subsequent arr will be called to quick sort
+- At worst case sort time `O(n^2)`, as subsequent arr will get called to quick sort
+- Picking last element as pivot causes worst-case behavior on already sorted arrays. It can be solved by choosing either a random index for the pivot, or choosing the middle index of the partition or choosing the median of the first, middle and last element of the partition for the pivot
 
 ```python
 # A typical recursive Python 
@@ -167,22 +168,30 @@ data = [9, 5, 7, 4, 2, 8]
 
 def partition(data, left, right): 
     pivot = data[left]
-    lIndex = left + 1
+    lIndex = left + 1 # Given 1st element is used as pivit we start at left + 1
     rIndex = right
 
     while True:
+        # If lIndex not go over rIndex and 
+        # left index element less than or equal to pivot
         while lIndex <= rIndex and data[lIndex] <= pivot:
             lIndex += 1
 
+        # If rIndex not go over lIndex and 
+        # right index element more than or equal to pivot
         while rIndex >= lIndex and data[rIndex] >= pivot:
             rIndex -= 1
 
+        # If rIndex crossed lIndex
         if rIndex <= lIndex:
             break
 
+        # if both indexes not cross the other (imply unfinished traverse)
+        # swap unmet elements with both rIndex and lIndex element
         data[lIndex], data[rIndex] = data[rIndex], data[lIndex]
         print(data)
 
+    # Replace pivot with rIndex element
     data[left], data[rIndex] = data[rIndex], data[left]
     print(data)
     return rIndex
@@ -225,16 +234,17 @@ Public class Solution {
     public static int partition(int[] array, int left, int right, int pivot) {
         while(left <= right) {
 
-            // Move left forward until an out of order element is found 
+            // Move left index inward until an out of order element is found 
             while (array[left] < pivot) {
                 left++;
             }
 
-            // Move right backward until an out of order element is found 
+            // Move right index inward until an out of order element is found 
             while (array[right] > pivot) {
                 right--;
             }
 
+            // if traverse undone, swap right and left index element then continue inward toward pivot
             if (left <= right) {
                 swap(array, left, right);
                 left++;
