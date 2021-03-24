@@ -8,8 +8,8 @@
 | 1b  | [Choose an authentication method based on use case](./auth-methods.md) | :white_check_mark: |
 | 1c  | [Differentiate human vs. system auth methods](./auth-methods.md)       | :white_check_mark: |
 
-| 2   | Compare Vault policies                     |
-| --- | ------------------------------------------ |
+| 2   | Compare Vault policies                     | Progress |
+| --- | ------------------------------------------ | :------: |
 | 2a  | Illustrate the value of Vault policy       |
 | 2b  | Describe Vault policy syntax: path         |
 | 2c  | Craft a Vault policy based on requirements |
