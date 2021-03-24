@@ -232,14 +232,14 @@ The optional finer-grained control options are:
 
 - `required_parameters` - A list of parameters that must be specified.
 
-```hcl
-# This requires the user to create "secret/foo" with a parameter named
-# "bar" and "baz".
-path "secret/foo" {
-    capabilities = ["create"]
-    required_parameters = ["bar", "baz"]
-}
-```
+  ```hcl
+  # This requires the user to create "secret/foo" with a parameter named
+  # "bar" and "baz".
+  path "secret/foo" {
+      capabilities = ["create"]
+      required_parameters = ["bar", "baz"]
+  }
+  ```
 
 - `allowed_parameters` - Whitelists a list of keys and values that are permitted on given path.
 
@@ -257,7 +257,132 @@ path "secret/foo" {
   }
   ```
 
-  Setting a parameter
+  Setting a parameter with a value of populated list allows parameter to contain only those values.
+
+  ```hcl
+  # This allows the user to create "secret/foo" with a parameter named
+  # "bar". It cannot contain any other parameters, and "bar" can only
+  # contain the values "zip" or "zap".
+  path "secret/foo" {
+    capabilities = ["create"]
+    allowed_parameters = {
+      "bar" = ["zip", "zap"]
+    }
+  }
+  ```
+
+  If any keys are specified, all non-specified parameters will be denied unless the parameter `"*"` is set to an empty array. Parameters with specific values will still be restricted to those values.
+
+  ```hcl
+  # This allows the user to create "secret/foo" with a parameter named
+  # "bar". The parameter "bar" can only contain the values "zip" or "zap",
+  # but any other parameters may be created with any value.
+  path "secret/foo" {
+    capabilities = ["create"]
+    allowed_parameters = {
+      "bar" = ["zip", "zap"]
+      "*"   = []
+    }
+  }
+  ```
+
+  Use of globbing may result in unexpected behavior.
+
+  ```hcl
+  # This allows the user to create or update "secret/foo" with a parameter
+  # named "bar". The values passed to parameter "bar" must start with "baz/"
+  # so values like "baz/quux" are fine. However, values like
+  # "baz/quux,wibble,wobble,wubble" would also be accepted. The API that
+  # underlies "secret/foo" might allow comma delimited values for the "bar"
+  # parameter, and if it did, specifying a value like
+  # "baz/quux,wibble,wobble,wubble" would result in 4 different values getting
+  # passed along. Seeing values like "wibble" or "wobble" getting passed to
+  # "secret/foo" might surprise someone that expected the allowed_parameters
+  # constraint to only allow values starting with "baz/".
+  path "secret/foo" {
+    capabilities = ["create", "update"]
+    allowed_parameters = {
+      "bar" = ["baz/*"]
+    }
+  }
+  ```
+
+- `denied_parameters` - Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameters`.
+
+  Setting a parameter with a value of empty list denied any changes to that parameter
+
+  ```hcl
+  # This allows the user to create "secret/foo" with any parameters not named "bar".
+  path "secret/foo" {
+    capabilities = ["create"]
+    denied_parameters = {
+      "bar" = []
+    }
+  }
+  ```
+
+  Setting a parameter with value of populated list denied any parameter containing those values.
+
+  ```
+  # This allows the user to create "secret/foo" with a parameter named
+  # "bar". It can contain any other parameters, but "bar" cannot contain
+  # the values "zip" or "zap".
+  path "secret/foo" {
+    capabilities = ["create"]
+    denied_parameters = {
+      "bar" = ["zip", "zap"]
+    }
+  }
+  ```
+
+  Setting to `"*"` will deny all parameter.
+
+  ```
+  # This allows the user to create "secret/foo", but it cannot have any parameters.
+  path "secret/foo" {
+    capabilities = ["create"]
+    denied_parameters = {
+      "*" = []
+    }
+  }
+  ```
+
+  If any parameters are specified, all non-specified parameters are allowed. unless `allowed_parameters` is also set, in which normal rules apply.
+
+Parameter values also support prefix/suffic globbing, enabled by prepending or appending `*` to the value:
+
+```hcl
+# Only allow a parameter named "bar" with a value starting with "foo-*".
+path "secret/foo" {
+  capabilities = ["create"]
+  allowed_parameters = {
+    "bar" = ["foo-*"]
+  }
+}
+```
+
+#### Required Response Wrapping TTLs
+
+- Can be used to set minimums/maximums on TTLs set by clients when requesting that a response be wrapped, with granularity of a second.
+- Can be specified as a number of seconds or string with a `s`, `m`, or `h` suffix.
+
+- `min_wrapping_ttl` - minimum allowed TTL specify for wrapped response. In practice, settig a minimum TTL of one second effectively makes response wrappig mandatory for a particular path. Can also be used to ensure that the TTL is not too low, leading end targets unable to unwrap before token expires.
+
+- `max_wrapping_ttl` - maximum allowed TTl that clients can specify for wrapped response.
+
+```hcl
+# This effectively makes response wrapping mandatory for this path by setting min_wrapping_ttl to 1 second.
+# This also sets this path's wrapped response maximum allowed TTL to 90 seconds.
+path "auth/approle/role/my-role/secret-id" {
+    capabilities = ["create", "update"]
+    min_wrapping_ttl = "1s"
+    max_wrapping_ttl = "90s"
+}
+```
+
+If paths are merged from different stanzas, lowest value specified is the value that will result.
+
+### Built-in Policies
 
 # Reference
 
