@@ -8,11 +8,11 @@ Simple test apis for istio demo purposes
 
 ### Docker Registry
 
-Apis is stored within [dockerhub](https://hub.docker.com/repository/docker/wnyao/test-api)
+APIs is stored within [dockerhub](https://hub.docker.com/repository/docker/wnyao/test-api)
 
 ```
 # There are 4 version deployed, simply switch out the v1 number at the end of image tag
-docker pull wnyao/test-api:v1
+docker pull wnyao/test-api:< v1 | v2 | v3 | v4 >
 ```
 
 ### APIs
