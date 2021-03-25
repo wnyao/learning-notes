@@ -1,0 +1,48 @@
+{
+  "name": "cra-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "baseui": "^9.78.0",
+    "css-loader": "^3.5.3",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flexbox-grid": "^2.1.2",
+    "react-scripts": "3.4.1",
+    "scss-loader": "^0.0.1",
+    "styled-components": "^5.1.0",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

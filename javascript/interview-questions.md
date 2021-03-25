@@ -4,10 +4,10 @@
 
 (This apply to other similar frameworks)
 
-- [What is React?](./framework/REACT.md)
-- [Why React?](./framework/REACT.md)
+- [What is React?](./react/about-react.md)
+- [Why React?](./react/about-react.md)
 - What are the differences between React and other frameworks?
-- [What is your favourite framework and why?](./framework/REACT.md)
+- [What is your favourite framework and why?](./react/about-react.md)
 
 #### React Native
 
@@ -31,7 +31,7 @@
 - [How is this difference in class ane normal function?](https://www.debuggr.io/js-this-in-depth/#the-quiz)
 - What is **recursion**?
 - What is the difference between **cookie** and **session**?
-- [What is the difference between null, undefined, and not defined?](.js/implementations/difference_null_undefined_notdefined.js)
+- [What is the difference between null, undefined, and not defined?](./javascript/how-to/difference_null_undefined_notdefined.js)
 - What is the difference between **bind**, **apply**, and **call** (function carrying & borrowing)?
 - What is **IIFE (Immediately invoked function expression)**?
 - Define **JSON (Javascript Object Notation)**?
@@ -54,8 +54,8 @@
 
 #### CSS
 
-- [What is BEM? how does it work?](./css/BEM.md)
-- [What are the differences between sass and scss?](./css/DIFF_SASS_SCSS.md)
+- [What is BEM? how does it work?](./cascading-style-sheet/bem-paradigm.md)
+- [What are the differences between sass and scss?](./cascading-style-sheet/difference-between-sass-scss.md)
 
 #### Networking
 
@@ -63,4 +63,7 @@
 - Does HTTPS use symmetric or asymmetric encryption?
 - certificates and certificate authorities?
 
-*
+#### Database
+
+- what is the difference between inner join and outer join?
+- what is indexing?
