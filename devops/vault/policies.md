@@ -4,7 +4,7 @@
 - Policies provide a declarative way to grant or forbid access to certain paths and operations in Vault.
 - Policies are deny by default, an empty policy grants no permission in the system.
 
-### Policy-Authorization Workflow
+## Policy-Authorization Workflow
 
 - Before a human or machine can gain access, an administrator must configure Vault with an auth method.
 
@@ -40,7 +40,7 @@ Now vault has an internal mapping between a backend authentication system and in
 
 The user then uses the Vault token for future operations. If user performs authentication steps again, they will get new token. The token will have the same permissions, but different. Authenticating second time does not invalidate original token.
 
-### Policy Syntax
+## Policy Syntax
 
 - Policies are written in HCL or JSON and describe paths in Vault a user or machine is allowed to access.
 
@@ -134,7 +134,7 @@ When there are potentially multiple matching policy paths, `P1` and `P2`, follow
 
 5. If `P1` is smaller lexicographically, it is lower priority.
 
-#### Capabilities
+### Capabilities
 
 - Each path must define one or more capabilities which provide fine-grained control over permitted (or denied) operations.
 - Capabilities are always specified as list of strings.
@@ -151,12 +151,12 @@ The capabilities are:
 
 Note that capabilities map to the HTTP verb, not the underlying action taken. Generating credentials creates credentials, but the HTTP request is a GET which corresponds to a `read` capabilities.
 
-### Templated Policies
+## Templated Policies
 
 - Policy syntax allows for variable replacement in some policy strings with values available to the token.
 - Currently `identity` information can be injected, and `path` keys in policies allow injection.
 
-#### Parameters
+### Parameters
 
 | Name                                                              | Description                                                             |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Note that capabilities map to the HTTP verb, not the underlying action taken. Ge
 | `identity.groups.ids.<group id>.metedata.<metadata key>`          | Metadata associated with the group for the given key                    |
 | `identity.groups.names.<group name>.metedata.<metadata key>`      | Metadata associated with the group for the given key                    |
 
-##### Example
+#### Examples
 
 Following policy creates a section of the KVv2 Secret Engine to a specific user
 
@@ -219,11 +219,11 @@ path "secrets/data/{{identity.entity.aliases.auth_kubernetes_xxxx.metadata.servi
 }
 ```
 
-### Fine-Grained Control
+## Fine-Grained Control
 
 - The capabilities associated with a path take precedence over permissions on parameters.
 
-#### Parameter Constraints
+### Parameter Constraints
 
 - Data is represented as `key=value` pairs.
 - Vault policies can optionally further restrict paths based on keys and data at those keys when evaluating the permission for path.
@@ -361,7 +361,7 @@ path "secret/foo" {
 }
 ```
 
-#### Required Response Wrapping TTLs
+### Required Response Wrapping TTLs
 
 - Can be used to set minimums/maximums on TTLs set by clients when requesting that a response be wrapped, with granularity of a second.
 - Can be specified as a number of seconds or string with a `s`, `m`, or `h` suffix.
@@ -382,7 +382,14 @@ path "auth/approle/role/my-role/secret-id" {
 
 If paths are merged from different stanzas, lowest value specified is the value that will result.
 
-### Built-in Policies
+## Built-in Policies
+
+- Vault has two built-in policies: `default` and `root`.
+
+### Default policy
+
+- Built-in policy that cannot be removed.
+- By default, attached to all tokens, but may be explicitly excluded at token creation time by supporting authentication methods.
 
 # Reference
 
