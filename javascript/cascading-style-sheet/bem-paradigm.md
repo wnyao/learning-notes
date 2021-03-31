@@ -48,8 +48,7 @@
 
 ```
 
-- A block should never override the styles of another block or modifier. This would make it almost impossible to read the HTML and understand what this component does;
-- This goes for HTML.
+- A block should never override the styles of another block or modifier. This would make it almost impossible to read the HTML and understand what this component does; This goes for HTML.
 - Never overriding modifiers in an unrelated block.
 - Avoiding making unnecessary parent elements when the child can exist quite happily by itself.
 
