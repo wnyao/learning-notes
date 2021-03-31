@@ -26,7 +26,7 @@
 </a>
 ```
 
-### Why should we consider BRM?
+### Why should we consider BEM?
 
 1. If we want to make a new style of a component, we can easily see which modifiers and children already exist. We might even realize we don’t need to write any CSS in the first place because there is a pre-existing modifier that does what we need.
 2. If we are reading the markup instead of CSS, we should be able to quickly get an idea of which element depends on another (in the previous example we can see that .btn\_\_price depends on .btn, even if we don’t know what that does just yet.)
@@ -53,7 +53,7 @@
 - Never overriding modifiers in an unrelated block.
 - Avoiding making unnecessary parent elements when the child can exist quite happily by itself.
 
-## Reference
+### Reference
 
 - [BEM 101](https://css-tricks.com/bem-101/#:~:text=The%20Block%2C%20Element%2C%20Modifier%20methodology,CSS%20in%20a%20given%20project.)
 - [More transparent ui code with namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
