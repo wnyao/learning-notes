@@ -12,7 +12,7 @@ Looks for the smallest item in the list and places it in the front (ensuring tha
 
 ### Sample Input
 
-```
+```python
 arr = 64 25 12 22 11
 ```
 
@@ -28,7 +28,7 @@ arr = 64 25 12 22 11
 
 ### Code
 
-```
+```python
 def selectionSort(arr)
     for i in range(len(arr)):
 

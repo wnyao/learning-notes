@@ -13,7 +13,7 @@ Insertion sort works by using a single item as a startig point and adding items 
 
 ### Sample Input
 
-```
+```python
 data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 ```
 
@@ -52,18 +52,18 @@ def insertionSort(arr):
 #### Example 2
 
 ```javascript
-var insert = function(array, rightIndex, value) {
-    for(var j = rightIndex; j >= 0 && array[j] > value; j--) {
-        array[j + 1] = array[j];
-    }
+var insert = function (array, rightIndex, value) {
+  for (var j = rightIndex; j >= 0 && array[j] > value; j--) {
+    array[j + 1] = array[j];
+  }
 
-    array[j + 1] = value;
+  array[j + 1] = value;
 };
 
-var insertionSort = function(array) {
-    for (var i = 1; i < array.length; i++) {
-        insert(array, i - 1, array[i]);
-    }
+var insertionSort = function (array) {
+  for (var i = 1; i < array.length; i++) {
+    insert(array, i - 1, array[i]);
+  }
 };
 
 var array = [22, 11, 99, 88, 9, 7, 42];
