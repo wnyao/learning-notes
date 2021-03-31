@@ -8,7 +8,7 @@
 ### Implementation Example
 
 - python doesn't come with a built-in tree object
-- using this simple tre requires that not try to store anthing other than a reference to another node.
+- use of following simple tree requires that not store anthing other than a reference to another node.
 
 ```python
 class binaryTree:

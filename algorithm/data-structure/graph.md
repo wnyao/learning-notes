@@ -23,7 +23,7 @@ graph = {
 
 ### Traverse
 
-Below example find on ly a path. It begins by building the path node by node. As with all recursive routines, this one requires exit strategy, which is that when the start value matches the end value, the path ends.
+Below example find only a path. It begins by building the path node by node. As with all recursive routines, this one requires exit strategy, which is that when the start value matches the end value, the path ends.
 
 Because each node in the graph can connect to multiple nodes, you need a for loop to check each of the potential connections. When the node in question already appears in the path, the code skips it. Otherwise, the code tracks the current path and recursively calls `find_path` to locate the next node in the path
 
