@@ -27,7 +27,7 @@
 - Defines a flex container; inline or block depending on the given value.
 - Enables flex context for all its direct children.
 
-#### flex-diretion
+#### flex-direction
 
 ```css
 .container {
@@ -36,8 +36,8 @@
 
 // row: left to right
 // row-reverse: right to left
-// column: same as row but top to bottom
-// column-reverse: same as row-reverse but bottonm to top
+// column: top to bottom
+// column-reverse: bottonm to top
 ```
 
 - Establish the main-axis.
@@ -117,10 +117,10 @@
     baseline;
 }
 
-// normal: items packed in thrie default position
+// normal: items packed in three default position
 // flex-start / start: items packed to start of container
 // flex-end / end: items packed to end of container
-// center: items entered in the container
+// center: items centered in the container
 // space-between: items evenly distributed with equal space between
 // space-around: items evenly distributed with equal space around each line
 // space-evenly: items evenly distributed with equal space around them
