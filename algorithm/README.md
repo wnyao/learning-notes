@@ -3,4 +3,5 @@
 ### Context
 
 - [Algorithm](./algorithm) (Summary)
-- [Problem](./problem) (Daily problem challenges)
+- [Data Structure](./data-structure) (Summary)
+- [Problem](./problem) (Online problem challenges)
