@@ -3,6 +3,7 @@
 - Selection sort replaced a predecessor, the bubble sort.
 - Have worst-case sort speed of `O(n^2)`
 - Perform fewer exhanges compare to bubble sort.
+- Always find the minimum/maximum element (depend on algorithm) in remaining unsorted array.
 
 ### Concept
 
