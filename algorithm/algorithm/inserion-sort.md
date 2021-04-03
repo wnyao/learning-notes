@@ -52,21 +52,20 @@ def insertionSort(arr):
 #### Example 2
 
 ```javascript
-var insert = function (array, rightIndex, value) {
-  for (var j = rightIndex; j >= 0 && array[j] > value; j--) {
-    array[j + 1] = array[j];
-  }
+const insertionSort = (arr) => {
+  for (var i = 1; i < arr.length; i++) {
+    let temp = arr[i];
 
-  array[j + 1] = value;
+    // run backward if condition met
+    for (var j = i - 1; j >= 0 && arr[j] > temp; j--) {
+      arr[j + 1] = arr[j]; // move bigger element forward
+    }
+
+    arr[j + 1] = temp;
+  }
 };
 
-var insertionSort = function (array) {
-  for (var i = 1; i < array.length; i++) {
-    insert(array, i - 1, array[i]);
-  }
-};
-
-var array = [22, 11, 99, 88, 9, 7, 42];
+var array = [11, 2, 9, 5, 4];
 insertionSort(array);
 ```
 
