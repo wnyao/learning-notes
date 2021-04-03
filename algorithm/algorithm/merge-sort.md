@@ -11,6 +11,20 @@
 
 The sort begins by breaking the dataset into individual pieces and sorting the pieces. It then merges the pieces in a manner that ensures that it has sorted the merged piece, The sorting and merging continues until the entire dataset is again a single piece.
 
+Basic process:
+
+1. Create base condition for `mergeSort` recursion.
+2. Get mid point of the array.
+3. Use `mergeSort` recursion break left and right half of array.
+4. Merged both left and right half with `merged` method.
+5. On `merge` method, initiate required variables: `leftStart, leftEnd, rightStart, rightEnd, size (size of array)`.
+6. On `merge` method, initiate other required indices: `left, right, index`.
+7. While `left` and `right` indices are in bound of `leftEnd` and `rightEnd`, compare left and right elements.
+8. If left element is smaller than right element, insert into `index` of sorted array and increase left and index.
+9. If right element is smaller than right element, insert into `index` of sorted array and increase right and index.
+10. Out of while loop, copy leftover elements on left half of array to sorted array.
+11. Out of while loop, copy leftover elements on right half of array to sorted array.
+
 ---
 
 ### Code
