@@ -56,7 +56,7 @@ const insertionSort = (arr) => {
   for (var i = 1; i < arr.length; i++) {
     let temp = arr[i];
 
-    // run backward if condition met
+    // run backward if condition met and find right position to insert
     for (var j = i - 1; j >= 0 && arr[j] > temp; j--) {
       arr[j + 1] = arr[j]; // move bigger element forward
     }
@@ -64,9 +64,6 @@ const insertionSort = (arr) => {
     arr[j + 1] = temp;
   }
 };
-
-var array = [11, 2, 9, 5, 4];
-insertionSort(array);
 ```
 
 # Readings
