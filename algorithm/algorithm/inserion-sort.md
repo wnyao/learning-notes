@@ -1,7 +1,7 @@
 # Insertion Sort
 
 - Considered a brute-force method
-- Insetion sort has best-case sort speed of `O(n)` and worst case sort spped of `O(n2)`
+- Insetion sort has best-case sort speed of `O(n)` and worst case sort speed of `O(n2)`
 - Example of best-case sort speed when the entire dataset is already sorted because the insertion sort wont have to move any values.
 - Example of worst-case is when dataset is sorted in reverse order because the insetion sort require to move every value.
 
