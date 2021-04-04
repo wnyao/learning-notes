@@ -1,6 +1,10 @@
 # Binary Search
 
-- Best case time complexity at `O(n log n)`
+- divide and conquer approach.
+- Best case complexity is `O(1)`.
+- Worst case complexity is `O(log n)`.
+- Can only apply if array is sorted
+- Can only be applied to data structures which allow direct access to elements, it cant be applied to linked list.
 
 ### Concept
 
