@@ -3,51 +3,42 @@
 ### Sample Input
 
 ```python
-var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-var targetValue = 73
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+targetValue = 73
 ```
 
 ### Sample Output
 
-```javascript
-20;
+```python
+20
 ```
 
 ### Code
 
-```javascript
-/**
- * Returns either the index of the location in the array,
- * or -1 if the array did not contain the targetValue.
- */
-function doSearch(array, targetValue) {
-  var min = 0;
-  var max = array.length - 1;
-  var guess;
+```python
+"""
+Returns either the index of the location in the array,
+or -1 if the array did not contain the targetValue.
+"""
+def binarySearch(arr, target):
+    start = 0
+    end = len(arr) - 1
 
-  while (max >= min) {
-    guess = Math.floor((max + min) / 2);
+    while end >= start:
+        guess =  (start + end) // 2
 
-    if (array[guess] === targetValue) {
-      return guess;
-    }
+        # check if mid point matches target
+        if arr[guess] == target:
+            return guess
 
-    if (array[guess] < targetValue) {
-      min = guess + 1;
-    } else {
-      max = guess - 1;
-    }
-  }
+        if arr[guess] < target:
+            # increase start so will increase guess on next loop
+            start = guess + 1
+        else:
+            # decrease end so will decrease guess on next loop
+            end = guess - 1
 
-  return -1;
-}
-
-var result = doSearch(primes, targetValue);
-println("Found prime at index " + result);
-
-Program.assertEqual(doSearch(primes, 73), 20);
-Program.assertEqual(doSearch(primes, 2), 0);
-Program.assertEqual(doSearch(primes, 97), primes.length - 1);
+    return -1
 ```
 
 ### Execution
@@ -56,35 +47,35 @@ Program.assertEqual(doSearch(primes, 97), primes.length - 1);
 primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 targetValue = 73
 
-min = 0
-max = 24
+start = 0
+end = 24
 guess = undefined
 
-max >= min = true
+end >= start = true
 guess = 12
 (arr[guess] === targetValue) = (41 === 73) = false
 (arr[guess] < targetValue) = (41 < 73) = true
-min = 13
+start = 13
 
-max >= min = true
+end >= start = true
 guess = 19
 (arr[guess] === targetValue) = (71 === 73) = false
 (arr[guess] < targetValue) = (71 < 73) = true
-min = 20
+start = 20
 
-max >= min = true
+end >= start = true
 guess = 22
 (arr[guess] === targetValue) = (83 === 73) = false
 (arr[guess] < targetValue) = (83 < 73) = false
-max = 21
+end = 21
 
-max >= min = true
+end >= start = true
 guess = 21
 (arr[guess] === targetValue) = (79 === 73) = false
 (arr[guess] < targetValue) = (79 < 73) = false
-max = 20
+end = 20
 
-max >= min = true
+end >= start = true
 guess = 20
 (arr[guess] === targetValue) = (73 === 73) = true
 return 20
