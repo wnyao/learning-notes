@@ -25,18 +25,18 @@ def binarySearch(arr, target):
     end = len(arr) - 1
 
     while end >= start:
-        guess =  (start + end) // 2
+        mid =  (start + end) // 2
 
         # check if mid point matches target
-        if arr[guess] == target:
-            return guess
+        if arr[mid] == target:
+            return mid
 
-        if arr[guess] < target:
-            # increase start so will increase guess on next loop
-            start = guess + 1
+        if arr[mid] < target:
+            # increase start so will increase mid on next loop
+            start = mid + 1
         else:
-            # decrease end so will decrease guess on next loop
-            end = guess - 1
+            # decrease end so will decrease mid on next loop
+            end = mid - 1
 
     return -1
 ```
@@ -49,35 +49,34 @@ targetValue = 73
 
 start = 0
 end = 24
-guess = undefined
 
 end >= start = true
-guess = 12
-(arr[guess] === targetValue) = (41 === 73) = false
-(arr[guess] < targetValue) = (41 < 73) = true
+mid = 12
+(arr[mid] === targetValue) = (41 === 73) = false
+(arr[mid] < targetValue) = (41 < 73) = true
 start = 13
 
 end >= start = true
-guess = 19
-(arr[guess] === targetValue) = (71 === 73) = false
-(arr[guess] < targetValue) = (71 < 73) = true
+mid = 19
+(arr[mid] === targetValue) = (71 === 73) = false
+(arr[mid] < targetValue) = (71 < 73) = true
 start = 20
 
 end >= start = true
 guess = 22
-(arr[guess] === targetValue) = (83 === 73) = false
-(arr[guess] < targetValue) = (83 < 73) = false
+(arr[mid] === targetValue) = (83 === 73) = false
+(arr[mid] < targetValue) = (83 < 73) = false
 end = 21
 
 end >= start = true
 guess = 21
-(arr[guess] === targetValue) = (79 === 73) = false
-(arr[guess] < targetValue) = (79 < 73) = false
+(arr[mid] === targetValue) = (79 === 73) = false
+(arr[mid] < targetValue) = (79 < 73) = false
 end = 20
 
 end >= start = true
-guess = 20
-(arr[guess] === targetValue) = (73 === 73) = true
+mid = 20
+(arr[mid] === targetValue) = (73 === 73) = true
 return 20
 ```
 
