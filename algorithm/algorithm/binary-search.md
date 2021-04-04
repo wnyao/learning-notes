@@ -100,4 +100,5 @@ return 20
 # Readings
 
 - [Running time of binary search](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/running-time-of-binary-search)
-- [Binary search](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+- [Binary search (KhanAcademy)](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+- [Binary search (GeeksofGeeks)](https://www.geeksforgeeks.org/binary-search/)
