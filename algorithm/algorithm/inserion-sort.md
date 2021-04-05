@@ -5,13 +5,11 @@
 - Example of best-case sort speed when the entire dataset is already sorted because the insertion sort wont have to move any values.
 - Example of worst-case is when dataset is sorted in reverse order because the insetion sort require to move every value.
 
----
-
-### Concept
+## Concept
 
 Insertion sort works by using a single item as a startig point and adding items to the left or right of it based on whether these items are less than or greater than the selected item. As the number of sorted items builds, the algorithm checks new items against the sorted items and inserts the new item into the right position in the list.
 
----
+## Code
 
 ### Sample Input
 
@@ -33,9 +31,7 @@ data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 1 2 3 4 5 6 7 8 9 10
 ```
 
-### Code
-
-#### Example 1
+### Example 1
 
 ```python
 def insertionSort(arr):
@@ -51,7 +47,7 @@ def insertionSort(arr):
         print(data)
 ```
 
-#### Example 2
+### Example 2
 
 ```javascript
 const insertionSort = (arr) => {
@@ -68,7 +64,7 @@ const insertionSort = (arr) => {
 };
 ```
 
-# Readings
+### Readings
 
 - [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/)
 - [Insertionsort 2](https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true)

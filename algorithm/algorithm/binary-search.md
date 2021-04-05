@@ -6,9 +6,7 @@
 - Can only apply if array is sorted
 - Can only be applied to data structures which allow direct access to elements, it cant be applied to linked list.
 
----
-
-### Concept
+## Concept
 
 Search a sorted array by repeatedly dividing the search interval in half, narrow the interval to lower or upper half.
 
@@ -19,9 +17,7 @@ Basic process:
 3. Else If x is greater than the mid element, then x can only lie in right half subarray after mid element. So we recur for right half.
 4. Else (x is smaller) recur for the left half.
 
----
-
-### Code
+## Code
 
 #### Sample Input
 
@@ -103,7 +99,7 @@ mid = 20
 return 20
 ```
 
-# Readings
+### Readings
 
 - [Running time of binary search](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/running-time-of-binary-search)
 - [Binary search (KhanAcademy)](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)

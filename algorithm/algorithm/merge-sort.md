@@ -7,17 +7,13 @@
 - Unlike quick sort comparatively, merge sort requires `O(n)` extra storage which make it expensive. Allocating and de-allocating the extra space used increase the running time of the algorithm.
 - As said to not functioned efficiently for array but linked list
 
----
-
-### Concept
+## Concept
 
 The sort begins by breaking the dataset into individual pieces and sorting the pieces. It then merges the pieces in a manner that ensures that it has sorted the merged piece, The sorting and merging continues until the entire dataset is again a single piece.
 
----
+## Code
 
-### Code
-
-#### Example 1
+### Example 1
 
 ```python
 data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
@@ -78,7 +74,7 @@ def merge(left, right):
 mergeSort(data)
 ```
 
-#### [Example 2](https://www.youtube.com/watch?v=KF2j-9iSf4Q&ab_channel=HackerRank)
+### [Example 2](https://www.youtube.com/watch?v=KF2j-9iSf4Q&ab_channel=HackerRank)
 
 Process:
 
@@ -159,7 +155,7 @@ public class Solution {
 }
 ```
 
-# Readings
+### Readings
 
 - Algorithms for Dummies, Chapter 7: Arranging and Searching Data
 - [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)

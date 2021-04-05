@@ -5,13 +5,11 @@
 - Perform fewer exhanges compare to bubble sort.
 - Always find the minimum/maximum element (depend on algorithm) in remaining unsorted array.
 
----
-
-### Concept
+## Concept
 
 Looks for the smallest item in the list and places it in the front (ensuring that the item is in its correct location) or looks for the largest item and places it in the back of the list. Guarantees that items immediately appear in the final location once moved.
 
----
+## Code
 
 ### Sample Input
 
@@ -29,7 +27,7 @@ arr = 64 25 12 22 11
 11 12 22 25 64
 ```
 
-### Code
+### Example
 
 ```python
 def selectionSort(arr)
@@ -170,7 +168,7 @@ arr[min_idx] = arr[i]
 11 12 22 25 "64"
 ```
 
-# Readings
+### Readings
 
 - [Selection Sort](https://www.geeksforgeeks.org/selection-sort/)
 - Algorithms for Dummies, Chapter 7: Arranging and Searching Data

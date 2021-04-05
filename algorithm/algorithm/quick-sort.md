@@ -6,17 +6,15 @@
 - Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
 - The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n^2)`.
 
----
-
-### Performance
+## Performance
 
 The time taken by quick sort depends upon the input array and partition strategy.
 
-#### Best case
+### Best case
 
 The best case occurs when the partition process always picks the middle element as pivot.
 
-#### Worst case
+### Worst case
 
 The worst case occurs when the partition process always picks greatest or smallest element as pivot. If we consider partition strategy where last element is always picked as pivot, the worst case would occur when the array is already sorted in increasing or decreasing order.
 
@@ -26,9 +24,7 @@ Even modified versions of the Quicksort can have a worst-case sort time of `O(n^
 - The dataset is sorted in reverse order.
 - All the elements in the dataset are the same.
 
----
-
-### Concept
+## Concept
 
 It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways:
 
@@ -48,7 +44,7 @@ Basic process:
 7. Move the left pointer to the right by one and the right pointer to the left by one.
 8. If the left pointer and right pointer don’t meet, go to step 1.
 
----
+## Code
 
 ### [Iterative Quick Sort (Last element as pivot)](https://www.geeksforgeeks.org/iterative-quick-sort/)
 
@@ -263,7 +259,7 @@ Public class Solution {
 
 ```
 
-# Readings
+### Readings
 
 - [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
 - [Iterative Quick Sort](https://www.geeksforgeeks.org/iterative-quick-sort/)
