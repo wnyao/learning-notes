@@ -7,6 +7,8 @@
 - Unlike quick sort comparatively, merge sort requires `O(n)` extra storage which make it expensive. Allocating and de-allocating the extra space used increase the running time of the algorithm.
 - As said to not functioned efficiently for array but linked list
 
+---
+
 ### Concept
 
 The sort begins by breaking the dataset into individual pieces and sorting the pieces. It then merges the pieces in a manner that ensures that it has sorted the merged piece, The sorting and merging continues until the entire dataset is again a single piece.

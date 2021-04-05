@@ -6,6 +6,8 @@
 - Can only apply if array is sorted
 - Can only be applied to data structures which allow direct access to elements, it cant be applied to linked list.
 
+---
+
 ### Concept
 
 Search a sorted array by repeatedly dividing the search interval in half, narrow the interval to lower or upper half.

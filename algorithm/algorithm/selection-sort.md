@@ -5,6 +5,8 @@
 - Perform fewer exhanges compare to bubble sort.
 - Always find the minimum/maximum element (depend on algorithm) in remaining unsorted array.
 
+---
+
 ### Concept
 
 Looks for the smallest item in the list and places it in the front (ensuring that the item is in its correct location) or looks for the largest item and places it in the back of the list. Guarantees that items immediately appear in the final location once moved.

@@ -5,6 +5,8 @@
 - Example of best-case sort speed when the entire dataset is already sorted because the insertion sort wont have to move any values.
 - Example of worst-case is when dataset is sorted in reverse order because the insetion sort require to move every value.
 
+---
+
 ### Concept
 
 Insertion sort works by using a single item as a startig point and adding items to the left or right of it based on whether these items are less than or greater than the selected item. As the number of sorted items builds, the algorithm checks new items against the sorted items and inserts the new item into the right position in the list.
