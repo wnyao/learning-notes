@@ -188,11 +188,9 @@ def partition(data, left, right):
         # if both indexes not cross the other (imply unfinished traverse)
         # swap unmet elements with both rIndex and lIndex element
         data[lIndex], data[rIndex] = data[rIndex], data[lIndex]
-        print(data)
 
     # Replace pivot with rIndex element
     data[left], data[rIndex] = data[rIndex], data[left]
-    print(data)
     return rIndex
 
 def quickSort(data, left, right):
