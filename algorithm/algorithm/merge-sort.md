@@ -1,6 +1,7 @@
 # Merge Sort
 
-- Worse-case sort speed is `O(n log n)`
+- Divide and conquer approach
+- Worse-case sort speed is `O(n log n)`, runs in `O(n* log n)` time in all the cases
 - Requires use of two functions
 - The first function works recursively to split the pieces and pieced them in sorted array; involves recursion
 - The second function performs task of merging the two sides using iterative process
@@ -9,7 +10,7 @@
 
 ## Concept
 
-The sort begins by breaking the dataset into individual pieces and sorting the pieces. It then merges the pieces in a manner that ensures that it has sorted the merged piece, The sorting and merging continues until the entire dataset is again a single piece.
+The sort begins by breaking the array into individual pieces. The given unsorted array with `n` elements, is divided into `n` subarrays, each having one element and sorting the pieces. It merges the pieces in a manner that ensures that it has sorted the merged piece, The sorting and merging continues until the entire dataset is again a single piece.
 
 ## Code
 

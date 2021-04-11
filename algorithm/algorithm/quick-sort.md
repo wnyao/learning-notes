@@ -1,7 +1,7 @@
 # Quick Sort
 
 - QuickSort is a **Divide and Conquer algoritm**.
-- Useful for sorting arrays.
+- Useful for sorting array data structure.
 - Unlike merge sort comparatively, quick sort in general form is an in-place sort (i.e. it doesn't require any extra storage)
 - Also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
 - The average sort time of a Quicksort is `O(n log n)`, but the worst-case sort time is `O(n^2)`.
@@ -28,10 +28,10 @@ Even modified versions of the Quicksort can have a worst-case sort time of `O(n^
 
 It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways:
 
-1. Always pick first element as pivot.
-2. Always pick last element as pivot (as below).
-3. Pick a random element as pivot.
-4. Pick median as pivot.
+- Always pick first element as pivot.
+- Always pick last element as pivot (as below).
+- Pick a random element as pivot.
+- Pick median as pivot.
 
 Basic process:
 
@@ -69,8 +69,7 @@ def partition(arr, low, high):
     for j in range(low, high):
 
         # If current element is smaller than or equal to pivot
-        # here we place element less than or
-        # equal to pivot to head of array
+        # place element to head of array
         if arr[j] <= pivot:
 
             # increment index of smaller element
@@ -79,7 +78,7 @@ def partition(arr, low, high):
             arr[i], arr[j] = arr[j], arr[i]
 
     # Put pivot to the end of left partition
-    # where smaller elements were allocated above
+    # where smaller elements were allocated
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return (i + 1)
 
