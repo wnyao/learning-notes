@@ -3,7 +3,7 @@
 - `call` and `apply` are interchangeable, you can decide whether it's easier to send in an array or a common separated list of arguments.
 - `bind` return new function.
 
-### [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+## [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
 `call()` method calls a function with given `this` context and arguments provided individually.
 
@@ -19,7 +19,7 @@ greeting.call(customer1, "Hello"); // expected output: Hello Leo
 greeting.call(customer2, "Hello"); // expected output: Hello Nat
 ```
 
-### [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+## [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 `apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
 
@@ -33,7 +33,7 @@ const min = Math.min.apply(null, numbers);
 console.log(min); // expected output: 2
 ```
 
-### [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+## [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
 ```
 let boundFunc = func.bind(thisArg[, arg1[, arg2[, argN]]]);
