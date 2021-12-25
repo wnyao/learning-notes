@@ -209,6 +209,8 @@ quickSort(data, 0, len(data)-1)
 
 ### [Iterative Sort (Randomized element as pivot)](https://www.youtube.com/watch?v=SLauY6PpjW4&t=477s&ab_channel=HackerRank)
 
+> Note: This example couldn't implemented using python due to maximum recursion depth exceeded
+
 ```java
 
 Public class Solution {
@@ -242,6 +244,7 @@ Public class Solution {
             }
 
             // if traverse undone, swap right and left index element then continue inward toward pivot
+            // if left >= right, it imply that all smaller elements are left of pivot and larger elements are right of pivot
             if (left <= right) {
                 swap(array, left, right);
                 left++;
@@ -249,7 +252,7 @@ Public class Solution {
             }
         }
 
-        # New partition point
+        // New partition point
         return left;
     }
 }

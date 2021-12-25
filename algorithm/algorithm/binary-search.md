@@ -60,6 +60,36 @@ def binarySearch(arr, target):
     return -1
 ```
 
+```go
+func search(nums []int, target int) int {
+  start := 0
+  end := len(nums) - 1
+  
+  
+  for {
+    pointer := (end + start) / 2
+    value := nums[pointer]
+    
+    if value == target {
+      return pointer
+    }
+    
+    if target < value {
+      end = pointer - 1
+    } else {
+      start = pointer + 1
+    }
+    
+    if start > end {
+      break
+    }
+  }
+  
+  
+  return -1
+}
+```
+
 ### Execution
 
 ```
