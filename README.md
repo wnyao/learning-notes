@@ -1,6 +1,6 @@
 # Learning notes
 
-Personal learning notes and documentations containing TLDR, awesome materials, how to, etc. Topics include Devops, JavaScript, Go, Algorithms, mostly from personal experiences.
+Personal learning notes and documentations containing TLDR, awesome materials, how to, etc. Topics include Devops, JavaScript, Go, Algorithms, CheatSheets, etc. Mostly from personal experiences.
 
 ### Have fun exploring!!!
 
