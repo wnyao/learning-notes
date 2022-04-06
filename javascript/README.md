@@ -9,4 +9,4 @@
 
 - [React](./react)
 - [JavaScript](./javascript)
-- [Cascading Style Sheet](./cascading-style-sheet)
+- [Cascading Style Sheet](./css)

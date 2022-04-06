@@ -1,13 +1,15 @@
-# React Context
+# React
 
-| Topic                                             | Last Update |
-| ------------------------------------------------- | ----------- |
-| [Element](./element.md)                           | 26 Mar 2021 |
-| [Components and Props](./components-and-props.md) | 26 Mar 2021 |
-| [State and Lifecycle](./state-and-lifecycle.md)   | 26 Mar 2021 |
-| [Handling Events](./handling-events.md)           | 26 Mar 2021 |
-| [Conditional Rendering](./handling-events.md)     | 27 Mar 2021 |
-| [React.useCallback](./use-callback.md)     | 27 Mar 2021 |
+- [Element](./element.md)
+- [Components and Props](./components-and-props.md)
+- [State and Lifecycle](./state-and-lifecycle.md)
+- [Handling Events](./handling-events.md)
+- [Conditional Rendering](./handling-events.md)
+- [React.useCallback](./use-callback.md)
+
+# Extras
+
+- [How to do X](./how-to)
 
 # Other reading materials
 

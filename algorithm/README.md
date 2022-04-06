@@ -1,4 +1,4 @@
-# Alhorithm Learnings
+# Algorithm Learnings
 
 ### Context
 
