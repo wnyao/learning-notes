@@ -1,0 +1,42 @@
+package scrabble
+
+import (
+	"fmt"
+	"strings"
+)
+
+func Score(word string) int {
+	finalScore := 0
+	scoring := map[int][]string{
+		1:  {"A", "E", "I", "O", "U", "L", "N", "R", "S", "T"},
+		2:  {"D", "G"},
+		3:  {"B", "C", "M", "P"},
+		4:  {"F", "H", "V", "W", "Y"},
+		5:  {"K"},
+		8:  {"J", "X"},
+		10: {"Q", "Z"},
+	}
+
+	for _, char := range word {
+		str := fmt.Sprintf("%c", char)
+
+		for score, letters := range scoring {
+			if contains(letters, str) == true {
+				finalScore += score
+				break
+			}
+		}
+	}
+
+	return finalScore
+}
+
+func contains(arr []string, char string) bool {
+	for _, v := range arr {
+		if strings.ToLower(v) == strings.ToLower(char) {
+			return true
+		}
+	}
+
+	return false
+}
