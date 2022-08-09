@@ -1,3 +1,3 @@
-# Front-end Topics
+# Frontend Topics
 
 - [Server Side Rendering, Static Site Generation, and Client Side Rendering](./ssg-ssr-csr.md)
