@@ -24,5 +24,7 @@ func Square(number int) (uint64, error) {
 }
 
 func Total() uint64 {
-	return uint64(math.Pow(2, 64))
+	// https://github.com/golang/go/issues/29463#issuecomment-450532581
+	// not representable by math.Pow(2, 64) for uint64
+	return uint64(1<<64 - 1)
 }
