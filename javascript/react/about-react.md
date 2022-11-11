@@ -35,7 +35,7 @@ function sum(a, b) {
 
 ### React.PureComponent
 
-- Similar ro `React.Component`. The difference between them is `React.Component` doesn't implement `shouldComponentUpdate()`, but `React.PureComponent` implements it with a shallow prop and state comparison.
+- Similar to `React.Component`. The difference between them is `React.Component` doesn't implement `shouldComponentUpdate`, but `React.PureComponent` implements it with a shallow prop and state comparison.
 
 ### Stateful Component
 

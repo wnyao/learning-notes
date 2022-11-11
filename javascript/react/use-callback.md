@@ -54,11 +54,9 @@ false === false // true
 const z = {}
 z === z // true
 
-
 {} === {} // false
 [] === [] // false
 () => {} === () => {} // false
-
 
 function factory() {
   return (a, b) => a + b;
@@ -98,6 +96,7 @@ function App() {
 // this will rerender
 const NormalBtn = ({ onClick, message, label }) => {
   console.log(message)
+
   return (
     <button onClick={onClick}>
       {label}

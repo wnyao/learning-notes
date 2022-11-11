@@ -1,23 +1,23 @@
 # [Handling Events](https://reactjs.org/docs/handling-events.html)
 
-- React events are named using camelCase, rathen than lowercase
+- React events are named using camelCase, rather than lowercase
 - With JSX you pass function as event handler, rather than string.
 
 ```jsx
 // HTML DOM element
 <button onclick="activateLasers()">
-    Activate Lasers
+  Activate Lasers
 </button>
 
 // React JSX element
 <button onClick={activateLasers}>
-    Activate Lasers
+  Activate Lasers
 </button>
 ```
 
 - Cannot return `false` to prevent default behavior in React, must call `preventDefault` explicitly.
 - React uses synthetic event, accoding to W3C spec
-- Reaact events do not work the same as native events.
+- React events do not work the same as native events.
 
 ```jsx
 // HTML DOM element

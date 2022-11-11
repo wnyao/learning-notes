@@ -1,6 +1,6 @@
 # [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
-- lifecycle methods allowed declare special methods to run some code.
+- Lifecycle methods allowed declare special methods to run some code.
 - `componentDidMount()` method runs after component output has been rendered to DOM.
 - `componentWillUnmount()` tear down component
 
@@ -40,13 +40,13 @@ ReactDOM.render(<Clock />, document.getElementById("root"));
 
 #### Steps taken on above component
 
-1. `<Clock/>` passed to `ReactDOM.render()`, React calls constructor of `Clock` component, initilizes `this.state`.
+1. `<Clock/>` passed to `ReactDOM.render()`, React calls constructor of `Clock` component, initializes `this.state`.
 2. React calls `Clock` components's `render()` method, learns what should be displayed. Then updates the DOM to match `Clock`'s render output.
-3. When `Clock` output is inserted in the DOM, React calls `componentDidMount()`, set up timer and call `tick()` method.
-4. The `Clock` component schedules UI update by calling `setState()` every second from `tick()` method.
-5. If `Clock` component is removed from DOM, React callse `componentWillUnmount()`.
+3. When `Clock` output is inserted in the DOM, React calls `componentDidMount`, set up timer and call `tick()` method.
+4. The `Clock` component schedules UI update by calling `setState` every second from `tick()` method.
+5. If `Clock` component is removed from DOM, React calls `componentWillUnmount`.
 
-### Usig State Correctly
+### Using State Correctly
 
 - The only place you can assign `this.state` is constructor.
 - Props and state updates may be asynchronous.
@@ -57,7 +57,7 @@ Use second form of `setState()` that accept function to fix asynchronous calcula
 
 ```jsx
 this.setState((state, props) => ({
-    conunter state.counter + props.increment
+  return state.counter + props.increment
 }));
 ```
 

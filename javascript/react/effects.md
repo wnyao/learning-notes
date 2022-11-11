@@ -2,8 +2,7 @@
 
 ## `useEffect`
 
-`useEffect(didUpdate)` accepts a function that contains imperative, possibly effectful code, which are mutations, subscriptions, timers, logging, and other side effects. By default, effects run after every completed render, but the invocation can be controlled with a second argument of an array.
-
+`useEffect` accepts a function that contains imperative, possibly effectful code, which are mutations, subscriptions, timers, logging, and other side effects. By default, effects run after every completed render, but the invocation can be controlled with a second argument of an array.
 
 ## `useLayoutEffect`
 

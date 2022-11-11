@@ -10,7 +10,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-// Class compoent example
+// Class component example
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
@@ -31,7 +31,7 @@ const element = <Welcome name="Sara" />;
 ```
 
 - JSX attributes and children is pass as object "props".
-- Componenets can refer other components in their output.
+- Components can refer other components in their output.
 - Props are read-only
 - Function component is pure when they do not attempt to change their inputs, and always return same result for same inputs.
 - React components must act like pure functions with respect to their props.
