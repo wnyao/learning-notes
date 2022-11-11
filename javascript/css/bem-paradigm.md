@@ -3,7 +3,7 @@
 - BEM stands for **Block, Element, Modifier** methodology
 - Its goal is to help developers better understand the relationship between the HTML and CSS of given project.
 
-```
+```css
 // Block component
 .btn {}
 
@@ -19,7 +19,7 @@
 - **Elements** can be placed inside and these are denoted by two underscores following the name of the block.
 - **Modifier** can manipulate the block so that we can theme or style that particular component without inflicting changes on completely unrelated module.
 
-```
+```css
 <a class="btn btn--big btn--orange" href="https://css-tricks.com">
   <span class="btn__price">$9.99</span>
   <span class="btn__text">Subscribe</span>
@@ -36,7 +36,7 @@
 
 ### Problems with BEM CSS
 
-```
+```css
 .nav .nav__listItem .btn--orange {
   background-color: green;
 }
@@ -45,7 +45,6 @@
   <div class="nav__listItem">Item one</div>
   <div class="nav__listItem">Item two</div>
 </a>
-
 ```
 
 - A block should never override the styles of another block or modifier. This would make it almost impossible to read the HTML and understand what this component does; This goes for HTML.

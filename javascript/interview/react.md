@@ -4,8 +4,8 @@
 
 (This apply to other similar frameworks)
 
-- [What is React?](../javascript/react/about-react.md)
-- [Why React?](../javascript/react/about-react.md)
+- [What is React?](https://github.com/wnyao/learning-notes/blob/master/javascript/react/about-react.md)
+- [Why React?](https://github.com/wnyao/learning-notes/blob/master/javascript/react/about-react.md)
 - What are the differences between React and other frameworks?
 - What is your favourite framework and why?
 

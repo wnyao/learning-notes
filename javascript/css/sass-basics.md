@@ -30,18 +30,18 @@ body
 
 ```sass
 nav
-    ul
-        margin: 0
-        padding: 0
-        list-style: none
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
 
-    li
-        display: inline-block
+  li
+    display: inline-block
 
-    a
-        display: block
-        padding: 6px 12px
-        text-decoration: none
+  a
+    display: block
+    padding: 6px 12px
+    text-decoration: none
 ```
 
 ### Partials
@@ -64,15 +64,15 @@ $font-stack: Helvetica, sans-serif
 $primary-color: #333
 
 body
-    font: 100% $font-stack
-    color: $primary-color
+  font: 100% $font-stack
+  color: $primary-color
 
 // styles.sass
 @use 'base'
 
 .inverse
-    background-color: base.$primary-color
-    color: white
+  background-color: base.$primary-color
+  color: white
 ```
 
 ### Mixins
@@ -86,13 +86,13 @@ body
 ```sass
 // mixin
 =transform($property)
-    -webkit-transform: $property
-    -ms-transform: $property
-    transform: $property
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
 
 // use
 .box
-    +transform(rotate(30deg))
+  +transform(rotate(30deg))
 
 ```
 
@@ -117,29 +117,29 @@ body
 ```sass
 /* This CSS will print because %message-shared is extended */
 %message-shared
-    border: 1px solid #ccc
-    padding: 10px
-    color: #333
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
 
 /* This CSS won't print because %equal-heights is never extended */
 %equal-heights
-    display: flex
-    flex-wrap: wrap
+  display: flex
+  flex-wrap: wrap
 
 .message
-    @extend: %message-shared
+  @extend: %message-shared
 
 .success
-    @extend: %message-shared
-    border-color: green
+  @extend: %message-shared
+  border-color: green
 
 .error
-    @extend: %message-shared
-    border-color: red
+  @extend: %message-shared
+  border-color: red
 
 .warning
-    @extend: %message-shared
-    border-color: yellow
+  @extend: %message-shared
+  border-color: yellow
 ```
 
 ### Operators
@@ -148,15 +148,15 @@ body
 
 ```sass
 .container
-    width: 100%
+  width: 100%
 
 article[role="main"]
-    float: left
-    width: 600px / 960px * 100%
+  float: left
+  width: 600px / 960px * 100%
 
 aside[role="complementary"]
-    float: right
-    width: 300px / 960px * 100%
+  float: right
+  width: 300px / 960px * 100%
 ```
 
 ### Reference
