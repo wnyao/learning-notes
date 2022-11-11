@@ -32,7 +32,7 @@ function notDefinedA() {
 
 function notDefinedVar() {
   console.log(b);
-  b = 5;
+  const b = 5;
   // "ReferenceError: b is not defined
 }
 
