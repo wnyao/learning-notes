@@ -8,6 +8,7 @@
 - [Why React?](https://github.com/wnyao/learning-notes/blob/master/javascript/react/about-react.md)
 - What are the differences between React and other frameworks?
 - What is your favourite framework and why?
+- [What are the optimization techniques?](https://github.com/wnyao/learning-notes/blob/master/javascript/react/optimization.md)
 
 #### React Native
 
