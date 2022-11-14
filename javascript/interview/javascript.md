@@ -14,9 +14,9 @@
 - [What is the difference between **cookie** and **session**](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/web-storage-and-cookies.md)?
 - What is **IIFE (Immediately invoked function expression)**?
 - Define **JSON (Javascript Object Notation)**?
-- What is **lexical environment**?
+- [What is **lexical environment**?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/lexical-environment.md)
 - What is **recursion**?
-- [What is strict mode in es5]((https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/strict-mode.md))?
+- [What is strict mode in es5](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/strict-mode.md)?
 
 - What are javascript **primitive types** (How about null and undefiend)?
 - [What is the difference between null, undefined, and not defined?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/how-to/difference_null_undefined_notdefined.js)
