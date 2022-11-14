@@ -5,6 +5,7 @@
 - [Hoisting](./hoisting.md)                             
 - [Web Storage & Cookies](./web-storage-and-cookies.md)
 - [Map vs. Object](./map-vs-object.md)
+- [Strict Mode](./strict-mode.md)
 
 # Other reading materials
 
