@@ -18,7 +18,6 @@
 - Hybrid-Native vs Native?
 - [Hybrid-Native vs Hybrid-Web](https://ionicframework.com/resources/articles/ionic-vs-react-native-a-comparison-guide)
 
-
 #### Programming
 
 - What is Object Oriented Programming?
