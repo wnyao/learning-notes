@@ -21,12 +21,12 @@
 var Hook = {
   hooks: {},
 
-  register: function(name, callback) {
+  register: function (name, callback) {
     if (!Hook.hooks[name]) Hook.hooks[name] = [];
     Hook.hooks[name].push(callback);
   },
 
-  call: function(name, arguments) {
+  call: function (name, arguments) {
     if (!Hook.hooks[name]) return;
 
     // Loop throught registered callbacks with arguments
@@ -35,29 +35,33 @@ var Hook = {
         break;
       }
     }
-  }
+  },
 };
 
 function test() {
   // Set up the hooks
-  Hook.register("one", function(args) {
+  Hook.register("one", function () {
     console.log("One");
     return true;
   });
-  Hook.register("one", function(args) {
+
+  Hook.register("one", function () {
     console.log("Two");
     return true;
   });
-  Hook.register("one", function(args) {
+
+  Hook.register("one", function () {
     console.log(args[0]);
     args[0] = "Six";
     return true;
   });
-  Hook.register("one", function(args) {
+
+  Hook.register("one", function () {
     console.log("Four");
     return false;
   });
-  Hook.register("one", function(args) {
+
+  Hook.register("one", function () {
     console.log("Five");
     return true;
   });

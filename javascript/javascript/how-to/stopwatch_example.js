@@ -7,23 +7,23 @@
  *	bemindful on what variable can be access within scope and closure
  */
 
-//Class object
+// Class object
 function Stopwatch() {
   let startTime = null;
   let stopTime = null;
   let duration = 0;
   let hasEnabled = false;
 
-  this.start = function() {
+  this.start = function () {
     if (hasEnabled == true) {
       throw new Error("Stopwatch has started");
     } else {
       hasEnabled = true;
-      startTime = new Date().getTime(); //Note: new instance of Date to get the current time in ms
+      startTime = new Date().getTime(); // Note: new instance of Date to get the current time in ms
     }
   };
 
-  this.stop = function() {
+  this.stop = function () {
     if (hasEnabled == false) {
       throw new Error("Stopwatch has stopped");
     } else {
@@ -33,8 +33,8 @@ function Stopwatch() {
     }
   };
 
-  //calculate duration property
-  let calculateDuration = function() {
+  // Calculate duration property
+  let calculateDuration = function () {
     if (startTime && stopTime) {
       duration = (stopTime - startTime) / 1000;
       return;
@@ -46,12 +46,12 @@ function Stopwatch() {
     }
   };
 
-  //Getter definition (can be use for setter as well)
+  // Getter definition (can be use for setter as well)
   Object.defineProperty(this, "duration", {
-    get: function() {
+    get: function () {
       calculateDuration();
       return duration;
-    }
+    },
   });
 }
 

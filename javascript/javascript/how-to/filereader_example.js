@@ -8,11 +8,12 @@ function onFileUpload(event) {
   const file = event.target.files[0];
   const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = function () {
     const buffer = reader.result;
+    // ...
   };
 
-  reader.onerror = function(e) {
+  reader.onerror = function (e) {
     //...
   };
 
@@ -24,10 +25,10 @@ function onFileUpload(event) {
   const file = event.target.files[0];
   const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = function () {
     const text = reader.result; // data
   };
-  reader.onerror = function(error) {
+  reader.onerror = function (error) {
     console.log("error: ", error);
   };
 

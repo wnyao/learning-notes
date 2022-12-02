@@ -33,12 +33,6 @@ const updateImage = (index) => {
 
 window.addEventListener("scroll", () => {
   const scrollTop = html.scrollTop;
-
-  console.log("hrml: ", {
-    scrollTop: html.scrollTop,
-    scrollHeight: html.scrollHeight,
-  });
-
   const maxScrollTop = html.scrollHeight - window.innerHeight;
   const scrollFraction = scrollTop / maxScrollTop;
   const frameIndex = Math.min(
