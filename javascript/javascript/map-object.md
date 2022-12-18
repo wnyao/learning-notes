@@ -2,11 +2,12 @@
 
 ### Object
 
-`Object` is similar to `Map`, let you:
-  - set keys to value
-  - retrieve those values
-  - delete keys
-  - detect whether somthing is store as key
+Similar to `Map`, object let you:
+
+- set keys to value
+- retrieve those values
+- delete keys
+- detect whether something is store as key
 
 ### Map
 
@@ -17,7 +18,7 @@
 ## Difference
 
 **Accidental Keys**
-  - **Map**: doesn't contain any keys by default; containes only what is explicitly put into it.
+  - **Map**: doesn't contain any keys by default; contains only what is explicitly put into it.
   - **Object**: has prototype; contains default keys that could collide with your own keys.
 
 **Key Types**
@@ -48,6 +49,7 @@
 
 Object: 
 ```js
+// general example
 let obj = {
     foo: "bar",
     zee: "zap"
@@ -55,6 +57,17 @@ let obj = {
 
 obj["hello"] = "world";
 delete obj.foo;
+
+// You can spread an array to object which will indexed array values in number order
+const indexedObj = { ...[1, 2, 3, 4] };
+console.log(indexedObj); // { 0: 1, 1: 2, 2: 3, 3: 4 }
+
+// This changes the original object, given y is referred to x unless clone as new object
+const x = { a: 20, b: 22 };
+const y = x;
+y.a = 30;
+delete y.b;
+console.log(x.a, x.b); // 30, undefined
 ```
 
 Map: 

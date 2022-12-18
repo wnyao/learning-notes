@@ -5,7 +5,8 @@
 
 ## [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-`call()` method calls a function with given `this` context and arguments provided individually.
+- `call()` method calls a function with given `this` context and arguments provided individually.
+- accepts an argument list
 
 ```javascript
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
@@ -21,7 +22,8 @@ greeting.call(customer2, "Hello"); // expected output: Hello Nat
 
 ## [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
-`apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
+- `apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
+- similar to `call()` except that it accepts a single array of arguments
 
 ```javascript
 const numbers = [5, 6, 2, 3, 7];
@@ -29,8 +31,12 @@ const numbers = [5, 6, 2, 3, 7];
 const max = Math.max.apply(null, numbers);
 console.log(max); // expected output: 7
 
-const min = Math.min.apply(null, numbers);
-console.log(min); // expected output: 2
+
+const array = ["a", "b"];
+const elements = [0, 1, 2];
+
+array.push.apply(array, elements);
+console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
 ## [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
@@ -39,7 +45,7 @@ console.log(min); // expected output: 2
 let boundFunc = func.bind(thisArg[, arg1[, arg2[, argN]]]);
 ```
 
-`bind()` method creates a new function that, when called, has its `this` keyword set to the context, with a given sequence of arguments preceding any provided when the new function is called.
+- `bind()` method creates a new function that, when called, has its `this` keyword set to the context, with a given sequence of arguments preceding any provided when the new function is called.
 
 ```javascript
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
@@ -61,6 +67,7 @@ The bind implementation would be like:
 ```javascript
 Function.prototype.bind = function (context) {
   var fn = this;
+
   return function () {
     fn.apply(context, arguments);
   };
