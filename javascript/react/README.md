@@ -6,7 +6,7 @@
 - [Handling Events](./handling-events.md)
 - [Conditional Rendering](./handling-events.md)
 - [React.useCallback](./use-callback.md)
-- [Effects](./effects.md)
+- [useEffects](./useEffects.md)
 
 # Extras
 
