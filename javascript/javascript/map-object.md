@@ -17,7 +17,7 @@ Similar to `Map`, object let you:
 
 ## Difference
 
-**Accidental Keys**
+**Key Collision**
   - **Map**: doesn't contain any keys by default; contains only what is explicitly put into it.
   - **Object**: has prototype; contains default keys that could collide with your own keys.
 
@@ -26,11 +26,11 @@ Similar to `Map`, object let you:
   - **Object**: keys of an Object must be either a String or a Symbol.
 
 **Key Order**
-  - **Map**: ordered in straighforward way.
+  - **Map**: ordered in straight forward way.
   - **Object**: ordered but not always the case, is complex. Best not rely on property order.
 
 **Size**
-  - **Map**: can be retrived from `size` property.
+  - **Map**: can be retrieved from `size` property.
   - **Object**: must be determine manually.
 
 **Iteration**
@@ -38,7 +38,7 @@ Similar to `Map`, object let you:
   - **Object**: doesn't implement an iteration protocol, not directly iterable using `for...of`.
 
 **Performance**
-  - **Map**: better in screnario involving frequent additiions and removals of key-value pairs.
+  - **Map**: better in scenario involving frequent additions and removals of key-value pairs.
   - **Object**: Not optimized
 
 **Serialization and parsing**
@@ -86,3 +86,5 @@ console.log(contacts.size) // 1
 ### Reference
 
 - [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [Map vs Object](https://www.explainthis.io/zh-hant/interview-guides/javascript/map-vs-object)
+- [Convert an Object to a Map in JavaScript](https://bobbyhadz.com/blog/javascript-convert-object-to-map#:~:text=To%20convert%20an%20object%20to,entries(obj))%20.)
