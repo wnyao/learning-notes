@@ -1,10 +1,12 @@
 /**
- * Note: Beware of using 'this' keyword
- *	there is no 'this' in arrow function
- *	'this' may refer to global object or object of the calling function, dependingly
- *	'let' within class object can be used for abstraction, similar to 'private' keyword used in java
- *	getter/setter can be defined using Object.defineProperty
- *	bemindful on what variable can be access within scope and closure
+ * NOTE
+ * ----
+ * Beware of using 'this' keyword
+ * there is no 'this' in arrow function
+ * 'this' may refer to global object or object of the calling function, dependingly
+ * 'let' within class object can be used for abstraction, similar to 'private' keyword used in java
+ * getter/setter can be defined using Object.defineProperty
+ * be mindful on what variable can be access within scope and closure
  */
 
 // Class object

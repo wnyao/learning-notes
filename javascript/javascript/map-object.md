@@ -15,11 +15,11 @@ Similar to `Map`, object let you:
 - remembers the original insertion of the keys
 - iterate its elements in insertion order
 
-## Difference
+## Differences
 
 **Key Collision**
   - **Map**: doesn't contain any keys by default; contains only what is explicitly put into it.
-  - **Object**: has prototype; contains default keys that could collide with your own keys.
+  - **Object**: has prototype; contains default keys that could collide with newly inserted keys.
 
 **Key Types**
   - **Map**: key can be any value (including function, objects or any primitive).
@@ -47,13 +47,13 @@ Similar to `Map`, object let you:
 
 ## Usage
 
-Object: 
+Object
 ```js
 // general example
 let obj = {
-    foo: "bar",
-    zee: "zap"
-  };
+  foo: "bar",
+  zee: "zap"
+};
 
 obj["hello"] = "world";
 delete obj.foo;
@@ -70,7 +70,7 @@ delete y.b;
 console.log(x.a, x.b); // 30, undefined
 ```
 
-Map: 
+Map
 ```js
 let contacts = new Map()
 contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})

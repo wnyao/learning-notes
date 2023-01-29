@@ -11,10 +11,20 @@
 
 execution stack and task queue
 
-- **Heap**: A heap is a data structure used to store objects
-- **Stack**: Last-in-first-out rule is adopted. When a function is executed, it will be added to the top of the stack. When execution is completed, it will be removed from the top of the stack.
-- **Queue**: Also a data structure, characterized by first-in-first-out. In javascript execution environment, the tasks waiting to be processed will be placed in the queue, and when the waiting stack is cleared, the first task will be taken out from the queue.
-- **Event Loop**: Will constantly check whether the stack is empty. If empty, it will put the task from queue to stack for execution.
+**Heap**: 
+- A heap is a data structure used to store objects
+
+**Stack**
+- Last-in-first-out (LIFO) rule is adopted.
+- When a function is executed, it will be added to the top of the stack. 
+- When execution is completed, it will be removed from the top of the stack.
+
+**Queue** 
+- Also a data structure, characterized by first-in-first-out (FIFO). 
+- In javascript execution environment, the tasks waiting to be processed will be placed in the queue, and when the waiting stack is cleared, the first task will be taken out from the queue.
+
+**Event Loop**
+- Will constantly check whether the stack is empty. If empty, it will put the task from queue to stack for execution.
 
 ### The steps of event loop
 
@@ -59,6 +69,7 @@ Common macro task and micro task are:
 - [Summary of the most common Even Loop interview questions](https://www.explainthis.io/zh-hant/interview-guides/javascript/js-event-loop-questions)
 - [Please explain the event loop in the browser (Event Loop)](https://www.explainthis.io/zh-hant/interview-guides/javascript/what-is-event-loop)
 - [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [If JavaScript Is Single Threaded, How Is It Asynchoronous?](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd?fbclid=IwAR38n2s4mstj5G52SGQyjQ2LpNPl-xB2bYmGlmZz_2097HAQlI5dOqWIJm0)
 
 
 

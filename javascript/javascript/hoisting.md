@@ -1,12 +1,13 @@
 # Hoisting
 
-- Javascript's default behavior of moving all declarations to the top of the current scope (top of current script or current function)
+- JS has default behavior of moving all declarations to the top of global scope
 - A variable can be declared after used
 
-**Example 1**
+### `var` keyword
 
 ```javascript
-x = 5; // initialize x
+// E1
+x = 5; // initialized x
 
 elem = document.getElementById("demo");
 elem.innerHTML = x;
@@ -14,47 +15,32 @@ elem.innerHTML = x;
 var x; // declare x
 ```
 
-**Example 2**
-
 ```javascript
+// E2
 var x; // declare x
-x = 5; // initialize x
+x = 5; // initialized x
 
 elem = document.getElementById("demo");
 elem.innerHTML = x;
 ```
 
-## `let` and `const` keywords
+### `let` and `const` keywords
 
-- variable with `let` and `const` defined, are hoisted to top of the block, but not initialized.
-
-**Example 1**
-
-This will result `ReferenceError`
+- hoisted to top of the block, but not initialized.
 
 ```javascript
+// E1
 car = "volvo";
-let car;
-```
-
-**Example 2**
-
-This will result `SyntaxError`
-
-```javascript
-car = "volvo";
-let car;
+let car; // ReferenceError: Cannot access 'car' before initialization 
 ```
 
 ## Initializations are not hoisted
 
 - Javascript only hoist declarations, not initialization.
 
-**Example 1**
-
-- `innerHTML` will result to `5 7`
-
 ```javascript
+// E1
+// innerHTML will result to "5 7"
 var x = 5; // initialize x
 var y = 5; // initialize y
 
@@ -62,12 +48,10 @@ elem = document.getElementById("demo");
 elem.innerHTML = x + " " + y;
 ```
 
-**Example 2**
-
-- `innerHTML` will result to `5 undefined`
-- only the declaration `var y`, not the initialization `= 5` is hoisted
-
 ```javascript
+// E2
+// innerHTML will result to "5 undefined"
+// only the declaration `var y`, not the initialization `= 5` is hoisted
 var x = 5; // initialize x
 
 elem = document.getElementById("demo");
@@ -79,3 +63,4 @@ var y = 5; // initialize y
 ### Reference
 
 - [Javascript Hoisting](https://www.w3schools.com/js/js_hoisting.asp)
+- [Hoisting in JavaScript with let and const - and How it Differs from var](https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/#:~:text=As%20I've%20explained%20in,a%20default%20initialization%20of%20undefined%20.)

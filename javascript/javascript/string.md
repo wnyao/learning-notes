@@ -27,16 +27,16 @@ console.log(a < b); // false
 // INCORRECT: You can't change string char by index
 a = "explain this";
 a[0] = "i";
-console.log(a[0]);
-console.log(a);
+console.log(a[0]); // e
+console.log(a); // explain this
 
 // CORRECT
 String.prototype.replaceAt = function(index, replacement) {
-  return this.substring(0, index) + replacement + this.substring(index + replacement.length);
+  return this.substring(0, index) + replacement + this.substring(index + 1, this.length);
 }
 
 const hello = "Hello World";
-alert(hello.replaceAt(2, "!!")); // He!!o World
+alert(hello.replaceAt(2, "!!")); // He!!lo World
 ```
 
 ### Reference

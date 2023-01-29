@@ -10,7 +10,7 @@
 
 **Example**
 
-```javascript
+```js
 const data = { greet: "Hello", name: "World" };
 
 // set single item
@@ -36,7 +36,7 @@ Window.localStorage.clear();
 
 **Example**
 
-```javascript
+```js
 const data = { greet: "Hello", name: "World" };
 
 // set single item
@@ -52,15 +52,15 @@ Window.sessionStorage.removeItem("data");
 Window.sessionStorage.clear();
 ```
 
-## [Cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
+## Cookie
 
-- A small piece of information left on a visitor's computer by a website, via a browser.
+- A small piece of information left on a visitor's computer by a website.
 - Used to personalize user's web experience with a website.
 - Can be set and modified at the server level using the `Set-Cookie` HTTP header, or with JS using `document.cookie`
 - 4kb, can be saved up to infinity.
 - Will continue to live after closing the tab and the browser.
 
-```javascript
+```js
 // client
 document.cookie = "username=John Doe";
 
@@ -82,7 +82,7 @@ app.use(function (req, res, next) {
 - 4kb, deleted when the user close the browser (not always deleted).
 - Will continue to live after closing the tab and the browser.
 
-```javascript
+```js
 // server
 var cookieSession = require("cookie-session");
 
@@ -106,7 +106,7 @@ app.use(
 - They cannot be transmitted over unencrypted connnection (HTTP).
 - Cookie is made secure by adding the `Secure` flag to the cookie.
 
-```javascript
+```js
 res.cookie("<cookie name>", "<cookie value>", {
   expires: new Date(Date.now() + 900000),
   httpOnly: false,

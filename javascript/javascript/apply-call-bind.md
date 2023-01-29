@@ -3,9 +3,9 @@
 - `call` and `apply` are interchangeable, you can decide whether it's easier to send in an array or a common separated list of arguments.
 - `bind` return new function.
 
-## [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+## Function.prototype.call
 
-- `call()` method calls a function with given `this` context and arguments provided individually.
+- `call` method calls a function with given `this` context and arguments provided individually.
 - accepts an argument list
 
 ```javascript
@@ -20,9 +20,9 @@ greeting.call(customer1, "Hello"); // expected output: Hello Leo
 greeting.call(customer2, "Hello"); // expected output: Hello Nat
 ```
 
-## [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+## Function.prototype.apply
 
-- `apply()` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
+- `apply` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
 - similar to `call()` except that it accepts a single array of arguments
 
 ```javascript
@@ -39,13 +39,13 @@ array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
-## [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+## Function.prototype.bind
 
 ```
 let boundFunc = func.bind(thisArg[, arg1[, arg2[, argN]]]);
 ```
 
-- `bind()` method creates a new function that, when called, has its `this` keyword set to the context, with a given sequence of arguments preceding any provided when the new function is called.
+- `bind` method creates a new function that, when called, has its `this` keyword set to the context, with a given sequence of arguments preceding any provided when the new function is called.
 
 ```javascript
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
@@ -77,10 +77,64 @@ Function.prototype.bind = function (context) {
 The value to be passed as the `this` parameter to the target function `func` when the bound function is called. The value is ignored if the bound function is constructed using the `new` operator.
 
 ```javascript
+function greeting(text) {
+  console.log(`${text} ${this.name}`);
+}
+
+let customer1 = { name: "Leo", email: "leo@gmail.com" };
+
 const helloLeo = greeting.bind(customer1);
 new helloLeo("hello"); // expected output: hello undefined
+```
+
+### Function borrowing
+
+- Function borrowing is borrowing the function from object rather than redefining it
+- Function borowing is usually a workaround for poor initial design
+
+```js
+let car1 = {
+  speed: 80,
+  getSpeed: function () {
+    return this.speed;
+  },
+};
+
+let car2 = {
+  speed: 60,
+};
+
+console.log(car1.getSpeed());
+console.log(car1.getSpeed.call(car2)); // borrowing getSpeed from car1
+```
+
+### Function currying
+
+- Currying is a advanced technique of working with function
+- Currying is a transformation of function
+
+```js
+function curry(f) { 
+  return function(a) {
+    return function(b) {
+      return f(a, b);
+    };
+  };
+}
+
+// usage
+function sum(a, b) {
+  return a + b;
+}
+
+let curriedSum = curry(sum);
+console.log(curriedSum(1)(2)); // 3
 ```
 
 ### Reference
 
 - [Javascript tips — Apply vs. Call vs. Bind](https://medium.com/@leonardobrunolima/javascript-tips-apply-vs-call-vs-bind-d738a9e8b4e1)
+- [Function.prototype.call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+- [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+- [Currying](https://javascript.info/currying-partials)
