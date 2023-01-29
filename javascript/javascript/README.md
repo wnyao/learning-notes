@@ -1,12 +1,3 @@
-# React
-
-- [Increment](./increment.md)                           
-- [Apply, Call, and Bind](./apply-call-bind.md) 
-- [Hoisting](./hoisting.md)                             
-- [Web Storage & Cookies](./storage.md)
-- [Map and Object](./map-object.md)
-- [Strict Mode](./strict-mode.md)
-
 # Readings
 
 #### Javascript Readings
