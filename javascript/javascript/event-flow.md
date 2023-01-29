@@ -2,7 +2,7 @@
 
 - Event is responsible for interaction of JS with HTML web pages.
 - Event can be defined as any act occur by someone, Eg. User or server.
-- Event flow process in JS is completed in three process: 
+- Event flow process in JS is completed in three processes/phases: 
   1. Event Capturing
   2. Event Target
   3. Event Bubbling
