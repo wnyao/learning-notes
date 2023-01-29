@@ -25,6 +25,7 @@
 - built-in object whose constructor returns a symbol primitive, also called a Symbol value or just a Symbol.
 - Every `Symbol()` call is guaranteed to return a unique Symbol.
 - Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object.
+- Symbol can simulate private variables that will not be traversed by conventional object methods. Require the use of `Object.getOwnPropertySymbols`
 
 ```js
 const sym1 = Symbol("foo");
@@ -70,3 +71,4 @@ JSON.stringify({ [Symbol("foo")]: "foo" });
 
 - [Primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 - [BigInt](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)
+- [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
