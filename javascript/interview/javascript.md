@@ -25,6 +25,7 @@
 - [What are javascript primitive types?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/primitive-types.md)
 - [What is scope?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/scope.md)
 - [What is closure?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/scope.md)
+- [What is type coercion ans conversion?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/coercion-conversion.md)
 
 - What is the difference between synchronous and asynchronous function? When do you use which?
 - Define JSON (Javascript Object Notation)?
