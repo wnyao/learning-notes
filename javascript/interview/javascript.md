@@ -8,6 +8,7 @@
 - [Implement functions that can deeply clone basic types](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/how-to/clone.md)
 - [What is event flow?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/event-flow.md)
 - [What is event bubbling?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/event-flow.md)
+- [What is event capturing?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/event-flow.md)
 - [What is the difference between bind, apply, and call](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/apply-vs-call-vs-bind.md)
 - [What is function currying and borrowing?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/apply-vs-call-vs-bind.md)
 - [What is hoisting](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/hoisting.md)
@@ -22,6 +23,8 @@
 - [What are the differences between function object and class object?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/function-class.md)
 - [What is IIFE (Immediately invoked function expression)?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/IIFE.md)
 - [What are javascript primitive types?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/primitive-types.md)
+- [What is scope?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/scope.md)
+- [What is closure?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/scope.md)
 
 - What is the difference between synchronous and asynchronous function? When do you use which?
 - Define JSON (Javascript Object Notation)?
