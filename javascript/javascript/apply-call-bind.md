@@ -20,6 +20,20 @@ greeting.call(customer1, "Hello"); // expected output: Hello Leo
 greeting.call(customer2, "Hello"); // expected output: Hello Nat
 ```
 
+The call implementation in vanilla JS:
+
+```js
+Function.prototype.call = function (context, ...args) {
+  context = context || window;
+  
+  const fnSymbol = Symbol("fn");
+  context[fnSymbol] = this;
+  
+  context[fnSymbol](...args);
+  delete context[fnSymbol];
+}
+```
+
 ## Function.prototype.apply
 
 - `apply` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
@@ -38,6 +52,21 @@ const elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
+
+The apply implementation in vanilla JS:
+
+```js
+Function.prototype.apply = function (context, argsArr) {
+  context = context || window;
+  
+  const fnSymbol = Symbol("fn");
+  context[fnSymbol] = this;
+  
+  context[fnSymbol](...argsArr);
+  delete context[fnSymbol];
+}
+```
+
 
 ## Function.prototype.bind
 
@@ -62,16 +91,21 @@ helloLeo("Hello"); // expected output: Hello Leo
 helloNat("Hello"); // expected output: Hello Nat
 ```
 
-The bind implementation would be like:
+The bind implementation in vanilla JS:
 
 ```javascript
-Function.prototype.bind = function (context) {
-  var fn = this;
-
-  return function () {
-    fn.apply(context, arguments);
-  };
-};
+Function.prototype.bind = function (context, ...args) {
+  context = context || window;
+  const fnSymbol = Symbol("fn");
+  context[fnSymbol] = this;
+  
+  return function (..._args) {
+    args = args.concat(_args);
+    
+    context[fnSymbol](...args);
+    delete context[fnSymbol];   
+  }
+}
 ```
 
 The value to be passed as the `this` parameter to the target function `func` when the bound function is called. The value is ignored if the bound function is constructed using the `new` operator.
@@ -90,7 +124,7 @@ new helloLeo("hello"); // expected output: hello undefined
 ### Function borrowing
 
 - Function borrowing is borrowing the function from object rather than redefining it
-- Function borowing is usually a workaround for poor initial design
+- Function borrowing is usually a workaround for poor initial design
 
 ```js
 let car1 = {
