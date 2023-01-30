@@ -1,4 +1,4 @@
-# Event flow
+# Event flow / Event Propagation process
 
 - Event is responsible for interaction of JS with HTML web pages.
 - Event can be defined as any act occur by someone, Eg. User or server.

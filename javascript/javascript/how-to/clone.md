@@ -36,7 +36,7 @@ function deepCopy(obj) {
     return result;
   }
   
-  // for instance null object
+  // non object type values
   return obj;
 }
 ```

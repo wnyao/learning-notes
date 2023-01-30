@@ -20,7 +20,7 @@
 - [How are JS integers represented](https://github.com/wnyao/learning-notes/blob/master/javascript/floating-point-representation.md)
 - [How does javascript run asynchronous code?](https://github.com/wnyao/learning-notes/blob/master/javascript/nodejs/event-loop.md)
 - [What are the differences between normal and arrow function?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/this.md)
-- [What are the differences between function object and class object?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/function-class.md)
+- [What are the differences between function object and class object?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/inheritance-prototype-chain.md)
 - [What is IIFE (Immediately invoked function expression)?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/IIFE.md)
 - [What are javascript primitive types?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/primitive-types.md)
 - [What is scope?](https://github.com/wnyao/learning-notes/blob/master/javascript/javascript/scope.md)
