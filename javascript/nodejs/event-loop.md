@@ -61,7 +61,7 @@ Promise.resolve()
 
 Common macro task and micro task are:
 
-- Macro tasks: `script (overall code), setTimeout, setInterval, I/O events, postMessage, MessageChannel, setImmediate (Node.js)`
+- Macro tasks: `script (overall code), setTimeout, setInterval, I/O events, postMessage, MessageChannel, setImmediate (Node.js), UI Rendering`
 - Micro tasks: `Promise.then, MutationObserver, process.nextTick (Node.js)`
 
 ### Reference
