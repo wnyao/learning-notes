@@ -6,5 +6,5 @@ Materials for interview questions and hands-on.
 - [css](./css.md)
 - [javascript](./javascript.md)
 - [react](./react.md)
-- [networking](./networking.md)
+- [network](./network.md)
 
