@@ -14,3 +14,4 @@
 | 28 Jan 2021 | [Time Conversion](./timeConversion)            | js py java |
 | 31 Jan 2021 | [Inserting Sort - Part 1](./insertingSort-1)   | js py java |
 | 31 Jan 2021 | [Inserting Sort - Part 2](./insertingSort-2)   | js py      |
+| 01 Feb 202  | [Flatten](./flatten)                           | js         |
