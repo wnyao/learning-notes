@@ -1,0 +1,18 @@
+### Function
+
+```sol
+// constant (deprecated on 0.4.17): indicates no transaction is needed and no gas/eth will be used
+function totalSupply() public constant returns (int);
+
+// public: indicates visibility to outside code
+function totalSupply() public constant returns (int);
+
+// public: indicates visibility to outside code
+function totalSupply() public pure returns (int);
+
+// view: indicates function does not modify storage
+function viewExample() public view returns(string)
+
+// pure: indicates function not read any state information
+function pureExample(uint para1 , uint para2) public pure returns(uint result)
+```
