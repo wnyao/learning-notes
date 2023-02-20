@@ -8,7 +8,6 @@ Learning notes and awesome reading materials on algorithm topics.
 - [Loop invariant condition with examples](https://www.geeksforgeeks.org/loop-invariant-condition-examples-sorting-algorithms/)
 - [Loop Invariants](https://www.cs.scranton.edu/~mccloske/courses/cmps144/invariants_lec.html)
 
-
 ##### Sorting
 
 - [Quick sort](./quick-sort.md)

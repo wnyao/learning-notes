@@ -1,19 +1,19 @@
 # Insertion Sort
 
 - Considered a brute-force method
-- Insetion sort has best-case sort speed of `O(n)` and worst case sort speed of `O(n2)`
+- Insertion sort has best-case sort speed of `O(n)` and worst case sort speed of `O(n^2)`
 - Example of best-case sort speed when the entire dataset is already sorted because the insertion sort wont have to move any values.
-- Example of worst-case is when dataset is sorted in reverse order because the insetion sort require to move every value.
+- Example of worst-case is when dataset is sorted in reverse order because the insertion sort require to move every value.
 
 ## Concept
 
-Insertion sort works by using a single item as a startig point and adding items to the left or right of it based on whether these items are less than or greater than the selected item. As the number of sorted items builds, the algorithm checks new items against the sorted items and inserts the new item into the right position in the list.
+Insertion sort works by using a single item as a starting point and adding items to the left or right of it based on whether these items are less than or greater than the selected item. As the number of sorted items builds, the algorithm checks new items against the sorted items and inserts the new item into the right position in the list.
 
 ## Code
 
 ### Sample Input
 
-```python
+```py
 data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 ```
 
@@ -33,33 +33,37 @@ data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 
 ### Example 1
 
-```python
+```py
 def insertionSort(arr):
-    for scanIndex in range(1, len(data)):
-        temp = data[scanIndex]
-        minIndex = scanIndex
+  data = arr.copy()
 
-        while minIndex > 0 and temp < data[minIndex - 1]:
-            data[minIndex] = data[minIndex - 1] # move comparative bigger element forward
-            minIndex -= 1 # move min index one step backward
+  for index in range(1, len(data)):
+    value = data[index]
+    minIndex = index
+    
+    # minIndex more than 0 and current value less than previous value
+    while minIndex > 0 and value < data[minIndex - 1]:
+      data[minIndex] = data[minIndex - 1] # move previous element forward
+      minIndex -= 1 # move min index one step backward
 
-        data[minIndex] = temp
-        print(data)
+    data[minIndex] = value
+
+  return data
 ```
 
 ### Example 2
 
-```javascript
+```js
 const insertionSort = (arr) => {
   for (var i = 1; i < arr.length; i++) {
-    let temp = arr[i];
+    let value = arr[i];
 
-    // run backward if condition met and find right position to insert
-    for (var j = i - 1; j >= 0 && arr[j] > temp; j--) {
+    // run backward if condition met and find the right position to insert
+    for (var j = i - 1; j >= 0 && arr[j] > value; j--) {
       arr[j + 1] = arr[j]; // move bigger element forward
     }
 
-    arr[j + 1] = temp;
+    arr[j + 1] = value;
   }
 };
 ```
@@ -67,6 +71,6 @@ const insertionSort = (arr) => {
 ### Readings
 
 - [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/)
-- [Insertionsort 2](https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true)
+- [Insertion Sort 2](https://www.hackerrank.com/challenges/insertionsort2/problem?isFullScreen=true)
 - [Analysis of insertion sort](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/analysis-of-insertion-sort)
 - Algorithms for Dummies, Chapter 7: Arranging and Searching Data

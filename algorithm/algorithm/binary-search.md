@@ -1,6 +1,6 @@
 # Binary Search
 
-- divide and conquer approach.
+- Divide and conquer approach.
 - Best case complexity is `O(1)`.
 - Worst case complexity is `O(log n)`.
 - Can only apply if array is sorted
@@ -21,43 +21,43 @@ Basic process:
 
 #### Sample Input
 
-```python
+```py
 primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 targetValue = 73
 ```
 
 #### Sample Output
 
-```python
+```py
 20
 ```
 
 #### Example
 
-```python
+```py
 """
 Returns either the index of the location in the array,
 or -1 if the array did not contain the targetValue.
 """
 def binarySearch(arr, target):
-    start = 0
-    end = len(arr) - 1
+  start = 0
+  end = len(arr) - 1
 
-    while end >= start:
-        mid =  (start + end) // 2
+  while end >= start:
+    mid = (start + end) // 2
 
-        # check if mid point matches target
-        if arr[mid] == target:
-            return mid
+    # check if middle point matches target value
+    if arr[mid] == target:
+      return mid
 
-        if arr[mid] < target:
-            # increase start so will increase mid on next loop
-            start = mid + 1
-        else:
-            # decrease end so will decrease mid on next loop
-            end = mid - 1
+    if arr[mid] < target:
+      # increase starting point to search the right half of the array
+      start = mid + 1
+    else:
+      # decrease end to search the left half of the array
+      end = mid - 1
 
-    return -1
+  return -1
 ```
 
 ```go
@@ -65,21 +65,22 @@ func search(nums []int, target int) int {
   start := 0
   end := len(nums) - 1
   
-  
   for {
-    pointer := (end + start) / 2
-    value := nums[pointer]
+    middleIndex := (end + start) / 2
+    value := nums[middleIndex]
     
     if value == target {
-      return pointer
+      return middleIndex
     }
     
     if target < value {
-      end = pointer - 1
+      end = middleIndex - 1
     } else {
-      start = pointer + 1
+      start = middleIndex + 1
     }
-    
+      
+    # there is no while loop in go, 
+    # we need to define break point for for loop
     if start > end {
       break
     }
