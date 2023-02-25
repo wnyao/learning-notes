@@ -4,7 +4,6 @@
 - CRUD is the standardized use of HTTP Action Verbs
 - commonly use API technologies are XMLHTTPRequest, Ajax, FetchAPI, Axios
 
-
 ### XMLHTTPRequest
 
 - Godfather of all API technologies

@@ -1,7 +1,7 @@
 # Merge Sort
 
-- Divide and conquer approach
-- Worse-case sort speed is `O(n log n)`, runs in `O(n* log n)` time in all the cases
+- Divide and conquer algorithm
+- Worse-case sort speed is `O(n log n)`
 - Requires use of two functions
 - The first function works recursively to split the piece into pieces and pieced them in a sorted array; involved recursion
 - The second function performs task of merging the two sides using iterative process
@@ -38,7 +38,7 @@ def mergeSort(list):
 # has to be sorted, else the result of merge will be invalid
 def merge(left, right):
   # When the left side or the right side is empty,
-  # it means that this is an individual item and is
+  # it means that this is an single item and is
   # already sorted.
   if not len(left):
     return left
@@ -50,10 +50,10 @@ def merge(left, right):
   result = []
   leftIndex = 0
   rightIndex = 0
-  totalLen = len(left) + len(right)
+  totalLength = len(left) + len(right)
 
   # Keep working until all of the items are merged.
-  while (len(result) < totalLen):
+  while (len(result) < totalLength):
     # Perform the required comparisons and merge
     # the pieces according to value.
     if left[leftIndex] < right[rightIndex]:
@@ -159,5 +159,5 @@ public class Solution {
 ### Readings
 
 - Algorithms for Dummies, Chapter 7: Arranging and Searching Data
-- [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/)
+- [Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?](https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/?ref=gcse)
 - [Algorithms: Merge Sort](https://www.youtube.com/watch?v=KF2j-9iSf4Q&ab_channel=HackerRank)

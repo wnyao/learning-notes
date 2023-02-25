@@ -23,6 +23,9 @@
 
 ### Closure
 
+- Closure is a combination of function bundled together with references to its surrounding state (the lexical environment)
+- It gives you access to the outer function's scope from inner function
+- Closure is created every time a function is created, at function creation time
 - Without being able to leverage scope chain rules, async operations would be impossible
 - Scope chain guarantee that data will still be around to use later
 
@@ -41,3 +44,4 @@ func();
 ### Reference
 
 - [Deep dive into Scope Chains and Closures](https://www.freecodecamp.org/news/deep-dive-into-scope-chains-and-closures-21ee18b71dd9/#:~:text=The%20scope%20chain%20is%20a,this%20case)%20has%20access%20to.)
+- [Closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)

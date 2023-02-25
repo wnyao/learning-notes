@@ -1,4 +1,27 @@
-# [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+# React Lifecycle
+
+- Three phases: Mounting, Updating, Unmounting
+
+### Mounting
+
+- constructor - calls before anything, usually for initializes component
+- getDerivedStateFromProps - calls right before rendering to DOM; static methods
+- render - method to output HTML to the DOM
+- componentDidMount - calls after component is rendered; places to initializes statements or effects
+
+### Updating
+
+- getDerivedStateFromProps
+- shouldComponentUpdate - method where you can specify whether to continue render or not
+- render
+- getSnapshotBeforeUpdate - method where you can access the props and state before the update
+- componentDidUpdate - calls after the component is updated in the DOM
+
+### Upmounting
+
+- componentWillUnmount - calls when component is about to be removed from the DOM
+
+# State and Lifecycle
 
 - Lifecycle methods allowed declare special methods to run some code.
 - `componentDidMount()` method runs after component output has been rendered to DOM.
@@ -71,3 +94,5 @@ this.setState((state, props) => ({
 # Reference
 
 - [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [React Lifecycle](https://www.w3schools.com/react/react_lifecycle.asp#:~:text=Each%20component%20in%20React%20has,Mounting%2C%20Updating%2C%20and%20Unmounting.)
+- [State: A Component's Memory](https://beta.reactjs.org/learn/state-a-components-memory)
