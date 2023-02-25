@@ -75,6 +75,53 @@ data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
 mergeSort(data)
 ```
 
+```js
+function mergeSort(data) {
+  if (data.length < 2) return data;
+
+  const middle = Math.floor(data.length / 2);
+  const left = mergeSort(data.slice(0, middle));
+  const right = mergeSort(data.slice(middle, data.length));
+  const result = merge(left, right);
+  return result;
+}
+
+function merge(left, right) {
+  if (!left.length) return left;
+  if (!right.length) return right;
+
+  let result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+  const total = left.length + right.length;
+
+  while (result.length < total) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+
+    if (left.length === leftIndex) {
+      result = result.concat(right.slice(rightIndex, right.length));
+      break;
+    }
+
+    if (right.length === rightIndex) {
+      result = result.concat(left.slice(leftIndex, left.length));
+      break;
+    }
+  }
+
+  return result;
+}
+
+let data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3];
+console.log(mergeSort(data));
+```
+
 ### [Example 2](https://www.youtube.com/watch?v=KF2j-9iSf4Q&ab_channel=HackerRank)
 
 Process:

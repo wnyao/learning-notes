@@ -54,7 +54,7 @@ def insertionSort(arr):
 ### Example 2
 
 ```js
-const insertionSort = (arr) => {
+function insertionSort(arr) {
   for (var i = 1; i < arr.length; i++) {
     let value = arr[i];
 
@@ -65,6 +65,24 @@ const insertionSort = (arr) => {
 
     arr[j + 1] = value;
   }
+};
+
+function insertionSort() {
+  let data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3];
+
+  for (let i = 1; i < data.length; i++) {
+    let value = data[i];
+    let minIndex = i;
+
+    while (minIndex > 0 && value < data[minIndex - 1]) {
+      data[minIndex] = data[minIndex - 1];
+      minIndex--;
+    }
+
+    data[minIndex] = value;
+  }
+
+  return data;
 };
 ```
 
