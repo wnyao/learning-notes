@@ -56,6 +56,8 @@ def partition(arr, low, high):
     i = (low - 1)         # index of smaller element
     pivot = arr[high]     # last element as pivot
 
+    # Sort less than and equal to element 
+    # to left of pivot index and vice versa
     for j in range(low, high):
         # If current element is smaller than or equal to pivot
         # place element to head of array
@@ -91,9 +93,9 @@ if __name__ == '__main__':
 The inner loop of this example continuously searches for elements that are in the wrong place and swaps them. When the code can no longer swap items, it breaks out of the loop and sets a new pivot point, which it returns to the caller. This is the iterative part of the process. The recursive part of the process handles the left and right side of the dataset,
 
 ```py
-def partition(arr, left, right):
-    pivot = arr[left]
-    lIndex = left + 1 # Given 1st element is used as pivit we start at left + 1
+def partition(arr, low, right):
+    pivot = arr[low]
+    lIndex = low + 1 # Given 1st element is used as pivit we start at low + 1
     rIndex = right
 
     while True:
@@ -116,7 +118,7 @@ def partition(arr, left, right):
         arr[lIndex], arr[rIndex] = arr[rIndex], arr[lIndex]
 
     # Replace pivot with rIndex element
-    arr[left], arr[rIndex] = arr[rIndex], arr[left]
+    arr[low], arr[rIndex] = arr[rIndex], arr[low]
     return rIndex
 
 def quickSort(arr, low, high):
@@ -133,25 +135,49 @@ if __name__ == '__main__' :
 
 ### [Iterative Sort (Randomized element as pivot)](https://www.youtube.com/watch?v=SLauY6PpjW4&t=477s&ab_channel=HackerRank)
 
-> Note: This example couldn't implemented using python due to maximum recursion depth exceeded
+```py
+def partition(arr, low, high):
+    pivot = arr[(low + high) // 2]
+    lIndex = low
+    rIndex = high
+
+    while lIndex <= rIndex:
+        while arr[lIndex] < pivot:
+            lIndex += 1
+
+        while arr[rIndex] > pivot:
+            rIndex -= 1
+
+        if lIndex <= rIndex:
+            arr[lIndex], arr[rIndex] = arr[rIndex], arr[lIndex]
+
+    return lIndex
+ 
+def quickSort(arr, low, high):
+  if low < high:
+    pi = partition(arr, low, high)
+    quickSort(arr, low, pi - 1)
+    quickSort(arr, pi + 1, high)
+
+if __name__ == '__main__' :
+  arr = [9, 5, 7, 4, 2, 8]
+  quickSort(arr, 0, len(arr) - 1)
+  print(arr)
+```
 
 ```java
-
 Public class Solution {
-
     public static void quickSort(int[] array) {
         quickSort(array, 0, array.length - 1)
     }
 
     public static void quickSort(int[] array, int left, int right) {
-        if (left >= right) {
-            return;
+        if (left < right) {
+          int pivot = array[(left + right) / 2]; // pick a pivot
+          int index = partition(array, left, right, pivot); // partition array around this pivot
+          quicksort(array, left, index - 1); // Sort left-sided array of pivot
+          quicksort(array, index, right); // Sort right-sided array of pivot
         }
-
-        int pivot = array[(left + right) / 2]; // pick a pivot
-        int index = partition(array, left, right, pivot); // partition array around this pivot
-        quicksort(array, left, index - 1); // Sort left-sided array of pivot
-        quicksort(array, index, right); // Sort right-sided array of pivot
     }
 
     public static int partition(int[] array, int left, int right, int pivot) {
@@ -180,7 +206,6 @@ Public class Solution {
         return left;
     }
 }
-
 ```
 
 ### Readings
