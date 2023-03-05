@@ -1,4 +1,4 @@
-Staircase detail
+### Question
 
 This is a staircase of size n = 4:
 
@@ -28,12 +28,6 @@ Print a staircase as described above.
 ### Input Format
 
 A single integer, **n**, denoting the size of the staircase.
-
-### Constraints
-
-```
-0 < n <= 100
-```
 
 ### Output Format
 

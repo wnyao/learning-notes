@@ -1,6 +1,4 @@
-### Factorial function
-
-### Description
+### Question
 
 We indicate factorial of `n` by `n!`. It's the product of integers 1 through n. For example, `5!` equals `1 * 2 * 3 * 4 * 5`, or 120.
 

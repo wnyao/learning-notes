@@ -1,4 +1,4 @@
-# Birthday Cake Candles
+### Question
 
 You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
 
@@ -26,13 +26,6 @@ birthdayCakeCandles has the following parameter(s):
 
 The first line contains a single integer, **n**, the size of candles[].
 The second line contains **n** space-separated integers, where each integer i describes the height of candles\*[i].
-
-### Constraints
-
-```
-1 <= n <= 10^5
-1 <= candles[i] <= 10^7
-```
 
 ### Sample Input 0
 

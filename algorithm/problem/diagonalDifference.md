@@ -1,4 +1,4 @@
-# Diagonal Difference
+### Question
 
 Given a square matrix of size , calculate the absolute difference between the sums of its
 diagonals.
@@ -7,10 +7,6 @@ diagonals.
 
 The first line contains a single integer, . The next lines denote the matrix's rows, with each line
 containing space-separated integers describing the columns.
-
-### Constraints
-
-- -100 <= Elements in the matrix <= 100
 
 ## Output Format
 
@@ -102,4 +98,4 @@ def diagonalDifference(arr):
 
 # Reference
 
-- \*[Diagonal Difference](https://www.hackerrank.com/challenges/diagonal-difference/problem)
+- [Diagonal Difference](https://www.hackerrank.com/challenges/diagonal-difference/problem)

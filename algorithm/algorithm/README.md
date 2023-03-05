@@ -14,7 +14,8 @@ Learning notes and awesome reading materials on algorithm topics.
 - [Merge sort](./merge-sort.md)
 - [Selection sort](./selection-sort.md)
 - [Insertion sort](./insertion-sort.md)
-- Heapsort (todo)
+- Bubble sort
+- Heap sort
 
 ##### Searching
 

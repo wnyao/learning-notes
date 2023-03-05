@@ -67,3 +67,4 @@ const element = React.createElement(
 - [What is the virtual Dom in React?](https://blog.logrocket.com/virtual-dom-react/#:~:text=The%20virtual%20Dom%20provides%20a%20mechanism%20that%20abstracts%20manual%20Dom,necessary%20on%20the%20actual%20Dom.)
 - [The diffing algorithm](https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
 - [Preserving and Resetting State](https://beta.reactjs.org/learn/preserving-and-resetting-state)
+- [A deep dive into React Fiber](https://blog.logrocket.com/deep-dive-react-fiber/#:~:text=React%20Fiber%20is%20an%20internal,long%2Dstanding%20issues%20in%20React.)

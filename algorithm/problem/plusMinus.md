@@ -1,4 +1,4 @@
-# Plus Minus
+### Question
 
 Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with places after the decimal.
 
@@ -34,13 +34,6 @@ Print the ratios of positive, negative and zero values in the array. Each value 
 
 The first line contains an integer, **n**, the size of the array.
 The second line contains **n** space-separated integers that describe .
-
-### Constraints
-
-```
-0 < n <= 100
--100 <= arr[i] <= 100
-```
 
 ### Output Format
 
