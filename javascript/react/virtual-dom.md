@@ -68,3 +68,4 @@ const element = React.createElement(
 - [The diffing algorithm](https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
 - [Preserving and Resetting State](https://beta.reactjs.org/learn/preserving-and-resetting-state)
 - [A deep dive into React Fiber](https://blog.logrocket.com/deep-dive-react-fiber/#:~:text=React%20Fiber%20is%20an%20internal,long%2Dstanding%20issues%20in%20React.)
+- [An Introduction to React Fiber - The Algorithm Behind React](https://www.velotio.com/engineering-blog/react-fiber-algorithm)
