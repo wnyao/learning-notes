@@ -31,7 +31,7 @@ const Rectangle = class RectangleClass {
 ### Inheritance
 
 - `extends` keyword is used to create class as a child of another constructor
-- call `super()` before using `this`, if there is a contructor present in the subclass
+- call `super()` before using `this`, if there is a constructor present in the subclass
 - can also use the `super` keyword to call corresponding methods of super class
 
 ### Constructor
@@ -130,3 +130,4 @@ SubClassWithStaticField.subStaticField // ""
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Static](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Does JavaScript function order matter?](https://www.jsdiaries.com/does-javascript-function-order-matter/#:~:text=The%20JavaScript%20compiler%20will%20process,of%20when%20they%20are%20called.)

@@ -8,7 +8,7 @@
 - `call` method calls a function with given `this` context and arguments provided individually.
 - accepts an argument list
 
-```javascript
+```js
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
 let customer2 = { name: "Nat", email: "nat@hotmail.com" };
 
@@ -16,8 +16,8 @@ function greeting(text) {
   console.log(`${text} ${this.name}`);
 }
 
-greeting.call(customer1, "Hello"); // expected output: Hello Leo
-greeting.call(customer2, "Hello"); // expected output: Hello Nat
+greeting.call(customer1, "Hello"); // Hello Leo
+greeting.call(customer2, "Hello"); // Hello Nat
 ```
 
 The call implementation in vanilla JS:
@@ -39,11 +39,11 @@ Function.prototype.call = function (context, ...args) {
 - `apply` method calls a function with a given `this` value, and `arguments` provided as an array (or an array-like object).
 - similar to `call()` except that it accepts a single array of arguments
 
-```javascript
+```js
 const numbers = [5, 6, 2, 3, 7];
 
 const max = Math.max.apply(null, numbers);
-console.log(max); // expected output: 7
+console.log(max); // 7
 
 
 const array = ["a", "b"];
@@ -76,7 +76,7 @@ let boundFunc = func.bind(thisArg[, arg1[, arg2[, argN]]]);
 
 - `bind` method creates a new function that, when called, has its `this` keyword set to the context, with a given sequence of arguments preceding any provided when the new function is called.
 
-```javascript
+```js
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
 let customer2 = { name: "Nat", email: "nat@hotmail.com" };
 
@@ -87,8 +87,8 @@ function greeting(text) {
 let helloLeo = greeting.bind(customer1);
 let helloNat = greeting.bind(customer2);
 
-helloLeo("Hello"); // expected output: Hello Leo
-helloNat("Hello"); // expected output: Hello Nat
+helloLeo("Hello"); // Hello Leo
+helloNat("Hello"); // Hello Nat
 ```
 
 The bind implementation in vanilla JS:
@@ -108,9 +108,9 @@ Function.prototype.bind = function (context, ...args) {
 }
 ```
 
-The value to be passed as the `this` parameter to the target function `func` when the bound function is called. The value is ignored if the bound function is constructed using the `new` operator.
+The value to be passed as `this` parameter to the target function `func` when the bound function is called. The value is ignored if the bound function is constructed using the `new` operator.
 
-```javascript
+```js
 function greeting(text) {
   console.log(`${text} ${this.name}`);
 }
@@ -118,7 +118,7 @@ function greeting(text) {
 let customer1 = { name: "Leo", email: "leo@gmail.com" };
 
 const helloLeo = greeting.bind(customer1);
-new helloLeo("hello"); // expected output: hello undefined
+new helloLeo("hello"); // hello undefined
 ```
 
 ### Function borrowing

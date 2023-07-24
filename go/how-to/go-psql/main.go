@@ -38,11 +38,13 @@ func dispatchExample(eg string) {
 }
 
 func main() {
+	// load dot env file
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatalf("Unable to load .env")
 	}
 
+	// command options
 	args := os.Args
 	if len(args) < 1 {
 		log.Fatalln("Include the command to run. Commands available: setup, example")
@@ -57,6 +59,7 @@ func main() {
 		if len(args) < 2 {
 			log.Fatalln("Include the example to run. Examples available: connect, single, multi, parameterised, null, insert, transaction, struct, return, prepared, conn, timeout")
 		}
+
 		example := strings.ToLower(args[2])
 		dispatchExample(example)
 	}
