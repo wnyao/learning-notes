@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FootballMatchReportsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-09-25T03:55:00" hostname="wenyaokong-MacBook-Pro" time="0.041">
+  <properties/>
+  <testcase name="The onField method returns the correct description of player with shirt number 1" classname="FootballMatchReportsTest" time="0.032"/>
+  <testcase name="The onField method throws IllegalArgumentException for negative shirt number" classname="FootballMatchReportsTest" time="0.002"/>
+  <testcase name="The onField method returns the correct description of players with shirt numbers 6, 7 and 8" classname="FootballMatchReportsTest" time="0.0"/>
+  <testcase name="The onField method returns the correct description of player with shirt number 10" classname="FootballMatchReportsTest" time="0.0"/>
+  <testcase name="The onField method throws IllegalArgumentException for unknown shirt number" classname="FootballMatchReportsTest" time="0.001"/>
+  <testcase name="The onField method returns the correct description of player with shirt number 5" classname="FootballMatchReportsTest" time="0.001"/>
+  <testcase name="The onField method returns the correct description of player with shirt number 11" classname="FootballMatchReportsTest" time="0.0"/>
+  <testcase name="The onField method returns the correct description of player with shirt number 2" classname="FootballMatchReportsTest" time="0.0"/>
+  <testcase name="The onField method returns the correct description of player with shirt number 9" classname="FootballMatchReportsTest" time="0.001"/>
+  <testcase name="The onField method returns the correct description of players with shirt numbers 3 and 4" classname="FootballMatchReportsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

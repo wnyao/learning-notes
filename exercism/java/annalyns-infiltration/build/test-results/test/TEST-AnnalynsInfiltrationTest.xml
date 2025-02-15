@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AnnalynsInfiltrationTest" tests="30" skipped="0" failures="0" errors="0" timestamp="2024-09-08T14:02:22" hostname="wenyaokong-MacBook-Pro" time="0.047">
+  <properties/>
+  <testcase name="The canSpy method returns true when everyone but prisoner is sleeping" classname="AnnalynsInfiltrationTest" time="0.025"/>
+  <testcase name="The canFreePrisoner method returns false when only archer is sleeping and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canSignalPrisoner method returns false when prisoner is sleeping and archer is awake" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canSignalPrisoner method returns false when both prisoner and archer are sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only knight is awake and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when everyone is sleeping and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only prisoner is sleeping and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSpy method returns true when only knight is sleeping" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canFreePrisoner method returns false when everyone is awake and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSpy method returns true when everyone is awake" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canFastAttack method returns true when knight is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns true when only archer is sleeping and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns true when everyone is sleeping and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSpy method returns true when only archer is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFastAttack method returns false when knight is awake" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only archer is awake and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns true when only knight is awake and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canFreePrisoner method returns false when only knight is sleeping and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canFreePrisoner method returns true when only prisoner is awake and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns true when only prisoner is awake and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canSpy method returns true when only prisoner is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only knight is sleeping and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSpy method returns false when everyone is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only archer is awake and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canSignalPrisoner method returns true when prisoner is awake and archer is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when everyone is awake and pet dog is present" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <testcase name="The canSpy method returns true when everyone but knight is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canFreePrisoner method returns false when only prisoner is sleeping and pet dog is absent" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSpy method returns true when everyone but archer is sleeping" classname="AnnalynsInfiltrationTest" time="0.0"/>
+  <testcase name="The canSignalPrisoner method returns false when both prisoner and archer are awake" classname="AnnalynsInfiltrationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

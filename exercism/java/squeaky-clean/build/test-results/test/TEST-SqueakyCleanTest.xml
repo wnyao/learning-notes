@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SqueakyCleanTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-09-15T20:04:37" hostname="wenyaokong-MacBook-Pro" time="0.042">
+  <properties/>
+  <testcase name="The clean method converts leetspeak to normal text with spaces and special characters" classname="SqueakyCleanTest" time="0.03"/>
+  <testcase name="The clean method converts leetspeak to normal text after replacing numbers with chars" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method replaces whitespaces with underscores in the middle of the string" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method returns the same string when invoked on a string of three letters" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method returns empty string when invoked on empty string" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method returns a string in camel case after removing a dash and replaces a whitespace" classname="SqueakyCleanTest" time="0.004"/>
+  <testcase name="The clean method returns a string in camel case and replaces leading and trailing whitespaces" classname="SqueakyCleanTest" time="0.001"/>
+  <testcase name="The clean method replaces leading and trailing whitespaces with underscores" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method removes all characters that are not letters" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method converts kebab to camel case after removing a dash" classname="SqueakyCleanTest" time="0.001"/>
+  <testcase name="The clean method removes all characters that are not letters and replaces spaces" classname="SqueakyCleanTest" time="0.0"/>
+  <testcase name="The clean method returns the same string when invoked on a single letter string" classname="SqueakyCleanTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

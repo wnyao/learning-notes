@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ElonsToyCarTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-09-15T21:47:13" hostname="wenyaokong-MacBook-Pro" time="0.039">
+  <properties/>
+  <testcase name="The static buy method returns a new remote controlled car instance" classname="ElonsToyCarTest" time="0.029"/>
+  <testcase name="The distanceDisplay method shows 0 meters message on a new car" classname="ElonsToyCarTest" time="0.004"/>
+  <testcase name="The distanceDisplay method shows the correct message after driving once" classname="ElonsToyCarTest" time="0.0"/>
+  <testcase name="The batteryDisplay method shows the correct message after driving once" classname="ElonsToyCarTest" time="0.0"/>
+  <testcase name="The distanceDisplay method shows the correct message after driving and draining all battery" classname="ElonsToyCarTest" time="0.0"/>
+  <testcase name="The batteryDisplay method shows battery empty after draining all battery" classname="ElonsToyCarTest" time="0.001"/>
+  <testcase name="The batteryDisplay method shows the correct battery percentage after driving multiple times" classname="ElonsToyCarTest" time="0.0"/>
+  <testcase name="The static buy method returns each time a new remote controlled car instance" classname="ElonsToyCarTest" time="0.0"/>
+  <testcase name="The distanceDisplay method shows the correct message after driving multiple times" classname="ElonsToyCarTest" time="0.001"/>
+  <testcase name="The batteryDisplay method shows full battery message on a new car" classname="ElonsToyCarTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

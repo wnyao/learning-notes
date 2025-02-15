@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CarsAssembleTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-09-08T15:19:42" hostname="wenyaokong-MacBook-Pro" time="0.038">
+  <properties/>
+  <testcase name="The workingItemsPerMinute should be 16 when line's speed is 5" classname="CarsAssembleTest" time="0.027"/>
+  <testcase name="The workingItemsPerMinute should be 26 when line's speed is 9" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The workingItemsPerMinute should be 0 when line's speed is 0" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The workingItemsPerMinute should be 26 when line's speed is 8" classname="CarsAssembleTest" time="0.0"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 7" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The workingItemsPerMinute should be 3 when line's speed is 1" classname="CarsAssembleTest" time="0.0"/>
+  <testcase name="The workingItemsPerMinute should be 28 when line's speed is 10" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 1" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 10" classname="CarsAssembleTest" time="0.0"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 4" classname="CarsAssembleTest" time="0.0"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 9" classname="CarsAssembleTest" time="0.001"/>
+  <testcase name="The productionRatePerHour method returns the correct result when line's speed is 0" classname="CarsAssembleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

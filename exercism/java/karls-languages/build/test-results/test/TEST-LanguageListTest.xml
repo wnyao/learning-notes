@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LanguageListTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2024-09-12T22:13:37" hostname="wenyaokong-MacBook-Pro" time="0.046">
+  <properties/>
+  <testcase name="The containsLanguage method returns true when the language is in the list" classname="LanguageListTest" time="0.031"/>
+  <testcase name="The count method returns 0 when the list is empty" classname="LanguageListTest" time="0.002"/>
+  <testcase name="The count method returns the number of languages in the list" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The isExciting method returns true when the list contains Kotlin" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The isEmpty method returns true when the list contains no languages" classname="LanguageListTest" time="0.001"/>
+  <testcase name="The firstLanguage method returns the first language that was added to the list" classname="LanguageListTest" time="0.002"/>
+  <testcase name="The isExciting method returns false when the list contains neither Java nor Kotlin" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The isExciting method returns true when the list contains Java" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The containsLanguage method returns false when the language is not in the list" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The removeLanguage method correctly removes a language from the list" classname="LanguageListTest" time="0.0"/>
+  <testcase name="The isEmpty method returns false after adding a language to the list" classname="LanguageListTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
