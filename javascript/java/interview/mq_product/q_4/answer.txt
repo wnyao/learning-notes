@@ -1,0 +1,3 @@
+If you use the same PreAuthorize configuration on each method in a class, how can you make the annotations cleaner?
+
+Can apply `@PreAuthorize` annotation at the class level, so that each methods of the class are allowed to inherit the security configuration.
